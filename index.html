@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>Imperial Asset Managers Limited – We are Imperial….Proudly Imperial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Popup -->
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <div class="popuptop">
+                To access this research, kindly create an account.
+                <div class="close-bt" onclick="closePopup()">x</div>
+            </div>
+            <div class="myform">
+<div class="formtitle">
+    Creat an Account
+</div>
+<input type="text" placeholder="First Name">
+<input type="email" placeholder="Email">
+<input type="text" placeholder="Phone Number">
+<input type="text" placeholder="Country">
+<input type="password" placeholder="Password">
+<button>Submit</button>
+            </div>
+        </div>
+     
+    </div>
+
+
+
+  
+    <header>
+        <div class="containers" id="header">
+            <div class="logo">
+                <img src="assets/IAML Logo-01.png" alt="">
+            </div>
+
+            <div class="links">
+                <a href="">About</a>
+                <a href="">Services</a>
+                <a href="">Careers</a>
+                <a href="">E-Trader</a>
+           <a href="" class="login">Login</a>
+           <a href="" class="register">Signup</a>
+            </div>
+        </div>
+    </header>
+    <div class="ovl">
+
+    </div>
+<main>
+    <div class="hero research">
+        <div class="containers">
+            <div class="toptxt">
+                Strategic Aspect of Assets  Management 
+            </div>
+            <div class="btxt">
+                Imperial Halfyear Outlook(2023)
+            </div>
+        
+            <div class="herobtn" id="open-popup-btn">
+                Get Report
+            </div>
+        
+        </div>
+            </div>
+        
+            
+            <div class="containers">
+         
+                <br>
+                <div class="reportsection">
+                  <div class="pills">
+                    <div class="pill pillactive">Asset Management</div>
+                    <div class="pill">E-Trader</div>
+                    <div class="pill">Security Trading</div>
+                  </div>
+        
+                  <div class="researchgrid" id="researchgrid">
+               
+               
+                  </div>
+                </div>
+
+                <br>
+                <br>
+                <br>
+                <div class="servicesgrid" id="servicegrid">
+
+                </div>
+            </div>
+</main>
+<br>
+<br>
+<footer>
+    <div class="containers">
+        <div class="footersec">
+            <div class="footertop">Explore</div>
+            <div class="footerbtm">
+                <a href="">
+                    About
+
+                </a>
+                <a href="">
+
+Board of Directors
+
+                </a>
+                <a href="">
+
+Management
+
+                </a>
+                <a href="">
+
+Careers
+                </a>
+
+            </div>
+        </div>
+
+        <div class="footersec">
+            <div class="footertop">Our Businesses</div>
+            <div class="footerbtm">
+                <a href="">Imperial Asset Managers Limited</a>
+                <a href="">Imperial Capital Advisers Limited</a>
+                
+                
+
+            </div>
+        </div>
+
+        <div class="footersec">
+            <div class="footertop">Our Newsfeed</div>
+            <div class="footerbtm">
+                <a href=""> All News</a>
+                <a href="">Research and Insights</a>
+                <a href="">Blog</a>
+                <a href="">Policies</a>
+                <a href="">Terms & Conditions</a>
+            </div>
+        </div>
+
+        
+        <div class="footersec">
+            <div class="footertop">Subscribe to our newsletter</div>
+            <div class="footerbtm">
+                Weekly email about trends shaping markets, industries and the global
+                economy.
+            </div>
+            <input type="text" class="footerinput">
+            <button>Submit</button>
+        </div>
+
+        
+        <div class="footersec">
+            <div class="footertop">Office Address</div>
+            <div class="footerbtm">
+                <a href=""><b>Lagos Office:</b></a>
+                <a href="">THE EBENEZER PLACE 148A, Ikeja Way Off Association Road Dolphin Estate, Ikoyi, Lagos.</a>
+      
+            </div>
+        </div>
+
+        <div class="footersec">
+            <div class="footertop">Reach Us</div>
+            <div class="footerbtm">
+                <a href=""><b>Send a Message</b></a>
+                <a href="mailto:talk2us@imperialasset.com.ng">talk2us@imperialasset.com.ng</a>
+                <a href="#">
+                    
+                    
+                    234 -1- 4637483, 08067035949, 09125007249
+
+                </a>
+      
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+    <script>
+        const researchData = [
+    {
+        title: "Elusive Safety: The New Geography of Capital Flows and Risk",
+        size: "5MB",
+        fileTypeIcon: "assets/vscode-icons_file-type-pdf2 (1).png",
+        access: "Free"
+    },
+    {
+        title: "Understanding the Digital Economy",
+        size: "3MB",
+        fileTypeIcon: "assets/vscode-icons_file-type-pdf2 (1).png",
+        access: "Free"
+    },
+    {
+        title: "Advancements in Artificial Intelligence",
+        size: "4MB",
+        fileTypeIcon: "assets/vscode-icons_file-type-pdf2 (1).png",
+        access: "Premium"
+    },
+    {
+        title: "Advancements in Artificial Intelligence",
+        size: "4MB",
+        fileTypeIcon: "assets/vscode-icons_file-type-pdf2 (1).png",
+        access: "Premium"
+    }
+    // Add more research data objects as needed
+];
+
+
+const servicedata = [
+    {
+        tag: "Explore",
+        text: "Our Services",
+        img: "assets/service (3).png",
+    },
+    {
+        tag: "Explore",
+        text: "Bonds",
+        img: "assets/service (4).png",
+    },
+    {
+        tag: "Explore",
+        text: "Equities",
+        img: "assets/service (5).png",
+    },
+    {
+        tag: "Explore",
+        text: "Exchange Traded Funds",
+        img: "assets/service (1).png",
+    },
+    {
+        tag: "Explore",
+        text: "Mutual Funds",
+        img: "assets/service (2).png",
+    },
+
+]
+
+function createResearchCards(dataArray) {
+    const researchGrid = document.getElementById('researchgrid');
+    let cardsHTML = '';
+
+    dataArray.forEach(data => {
+        const accessClass = data.access.toLowerCase(); // "free" or "paid"
+        cardsHTML += `
+            <div class="researchcard">
+                <div class="researchtop">
+                    <div class="researchbig">
+                        ${data.title}
+                    </div>
+                    <div class="researchsmall ${accessClass}">
+                        ${data.access}
+                    </div>
+                </div>
+                <div class="researchtop resbtm">
+                    <div class="filedetails">
+                        ${data.size} | <img src="${data.fileTypeIcon}" alt="">
+                    </div>
+                    <div class="actionpanel">
+                        <div class="icon">
+                            <span class="material-symbols-outlined">visibility</span>
+                        </div>
+                        <div class="icon">
+                            <span class="material-symbols-outlined">link</span>
+                        </div>
+                        <div class="icon">
+                            <span class="material-symbols-outlined">download</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+
+    researchGrid.innerHTML = cardsHTML;
+}
+
+function createservicedata(dataArray) {
+    const servicegrid = document.getElementById('servicegrid');
+    let cardsHTML = '';
+
+    dataArray.forEach(data => {
+    
+        cardsHTML += `
+        <div class="servicebox">
+    <div class="serviceimg">
+        <img src="${data.img}" alt="${data.text}">
+    </div>
+    <div class="servicetag">${data.tag}</div>
+    <div class="servicetext">${data.text}</div>
+</div>
+        `;
+    });
+
+    servicegrid.innerHTML = cardsHTML;
+}
+
+createservicedata(servicedata);
+createResearchCards(researchData);
+
+
+
+function openPopup() {
+    document.getElementById('overlay').style.display = 'block';
+    document.getElementById('popup').style.display = 'block';
+}
+
+// Function to close the popup
+function closePopup() {
+    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('popup').style.display = 'none';
+}
+
+// Event listener to open the popup (can be triggered by any event, like a button click)
+document.getElementById('open-popup-btn').addEventListener('click', openPopup);
+
+    </script>
+</body>
+</html>
