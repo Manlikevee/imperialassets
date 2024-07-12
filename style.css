@@ -88,28 +88,10 @@
   }
   
   
-  
-  header {
-    background-color: white;
-    background-color: var(--header-bg-color);
-    position: sticky;
-    top: 0;
-    width: 100%;
-  padding: 3px;
-    z-index: 9999;
-    /* Line/Bottom */
-    border-bottom: 1px solid var(--subtitle-color2);
-  }
+
   
   
-  header .containers {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px;
-  
-  
-  }
+
   
   
   
@@ -126,6 +108,29 @@
     outline: 1px solid slategrey;
   }
   
+  header .containers {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+  
+  
+  }
+
+
+    
+  header {
+    background-color: white;
+    background-color: var(--header-bg-color);
+    position: sticky;
+    top: 0;
+    width: 100%;
+  padding: 3px;
+    z-index: 9999;
+    /* Line/Bottom */
+    border-bottom: 1px solid var(--subtitle-color2);
+  }
+
   .links{
     display: flex;
     align-items: center;
@@ -207,6 +212,363 @@
     background-image: linear-gradient(rgba(34, 34, 34, 0.48), rgba(34, 34, 34, 0.48)), 
     url('/assets/martin-martz-X5fEKadz0Xc-unsplash\ \(1\).jpg');
   }
+
+
+  .careers{
+    background-size: cover;
+    background-position: top;
+    height: 70vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-image: linear-gradient(rgba(34, 34, 34, 0.48), rgba(34, 34, 34, 0.48)), 
+    url('/assets/Rectangle\ 90.png');
+  }
+  .ical{
+    background-image: url('/assets/Rectangle\ 70.png');
+  }
+
+  .jteam{
+    background-image: linear-gradient(rgba(34, 34, 34, 0.48), rgba(34, 34, 34, 0.48)), 
+    url('/assets/Rectangle\ 99\ \(1\).png');
+  }
+.research small{
+color: white;
+}
+.icalflex{
+  width: 100%;
+  display: flex;
+  gap: 30px;
+}
+
+.missionflex{
+  display: flex;
+  gap: 30px;
+
+font-size: 16px;
+font-weight: 400;
+line-height: 28px;
+text-align: left;
+
+}
+.missionhead{
+  width: 25%;
+}
+.missionvalue{
+  padding-right: 30px;
+  width: 100%;
+}
+
+.moduleflex .containers{
+  display: flex;
+  gap: 20px;
+  margin-bottom: 60px;
+}
+
+.modone{
+  width: 50%;
+  padding: 20px;
+
+}
+
+.modtwo{
+  width: 100%;
+  padding: 20px;
+}
+
+.moduleflex{
+  background-color: #F1F1EE;
+}
+.minihero{
+  background-size: cover;
+  background-position: top;
+  min-height: 73vh;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-image: linear-gradient(rgba(34, 34, 34, 0.38), rgba(34, 34, 34, 0.38)), 
+  url('/assets/Rectangle\ 108.png');
+  display: flex;
+  align-items: flex-end;
+  margin-block: 30px;
+
+
+}
+.whitemp .containers{
+  display: flex;
+  gap: 20px;
+}
+
+.whyimp{
+  background-color: #222222;
+  padding-bottom: 40px;
+}
+
+.whyimp .containers{
+  background-color: #222222;
+  display: flex;
+  gap: 20px;
+}
+
+.whyone{
+  width: 30%;
+  font-family: Goudy Old Style;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 45.01px;
+  text-align: left;
+  font-weight: 400;
+  text-align: left;
+  color: #fff;
+  padding-top: 30px;
+}
+
+.openrole{
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  color: #BFA162;
+  min-height: 150px;
+}
+
+.exppos{
+  margin-top: auto;
+  font-size: small;
+  color: #000000;
+  padding-bottom: 5px;
+}
+
+.openrole .opentitle{
+  font-family: Goudy Old Style;
+  color: #BFA162;
+font-size: 22px;
+font-weight: 600;
+line-height: 27.5px;
+text-align: left;
+
+}
+.whytwo{
+  color: black;
+  font-size: 30px;
+  line-height: 35.01px;
+}
+.whyimp .termtxt{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: #dfdfdff7;
+  font-family: Poppins;
+font-size: 15px;
+font-weight: 400;
+line-height: 27px;
+text-align: left;
+
+}
+.carhero{
+  background-image: linear-gradient(rgba(34, 34, 34, 0.38), rgba(34, 34, 34, 0.38)), 
+  url('/assets/image\ \(16\).png');
+}
+.miniherotext{
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 50%;
+
+
+}
+.menu-toggle {
+  display: none;
+}
+
+
+.iamhero{
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 50%;
+  font-family: Goudy Old Style;
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 45.01px;
+  text-align: left;
+  
+
+  font-weight: 400;
+
+  text-align: left;
+  color: #000;
+}
+main h3, main h2{
+  font-family: Goudy Old Style;
+}
+
+.myserviceimg{
+  width: 100%;
+  padding: 0px;
+  height: 150px;
+}
+.myserviceimg img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.servdata{
+  padding: 10px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.myservicecard{
+  border: 1px solid var(--subtitle-color2);
+  border-radius: 4px;
+  box-shadow: 6px 11px 28px 0px #0000000D;
+
+box-shadow: 25px 45px 51px 0px #0000000A;
+
+box-shadow: 56px 100px 69px 0px #00000008;
+
+box-shadow: 100px 178px 82px 0px #00000003;
+
+box-shadow: 156px 279px 89px 0px #00000000;
+
+}
+
+.myservicetitle{
+  color: #BFA162;
+font-size: 15px;
+font-weight: 600;
+line-height: 25.88px;
+text-align: left;
+
+}
+
+.myservicebody{
+color: #222222;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+  
+}
+
+.myservicecard a{
+  color: #000;
+
+  padding-top: 4px;
+font-size: 15px;
+font-weight: 600;
+line-height: 24px;
+text-align: left;
+
+}
+.iamflex{
+  display: flex;
+  gap: 20px;
+  width: 100%;
+}
+
+.imgflx{
+  padding-top: 10px;
+  display: flex;
+  gap: 30px;
+}
+
+.imgflx img{
+  height: 38px;
+  object-fit: contain;
+  width: 100px;
+}
+
+.aimflexone{
+  width: 75%;
+}
+
+.ainflextwo{
+  width: 100%;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 27.5px;
+  text-align: left;
+  color: #000000;
+}
+.minititle{
+  font-family: 'Goudy Old Style', sans-serif;
+    font-size: 27px;
+    font-weight: 600;
+    line-height: 27.61px;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.minibody{
+font-size: 15px;
+font-weight: 300;
+line-height: 26px;
+text-align: left;
+color: #FFFFFF;
+
+}
+.icaltxtone{
+  width: 50%;
+  font-family: 'Goudy Old Style', sans-serif;
+  font-size: 37px;
+}
+.icalsmall{
+  font-size: 17px;
+  padding-top: 9px;
+  padding-bottom: 20px;
+}
+.icaltwo, .ical .accbody{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 30px;
+}
+
+.icaltwo img{
+  width: 160px;
+  margin-top: 10px;
+  height: fit-content;
+  object-fit: contain;
+}
+
+.statgrid{
+  display: grid;
+
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 14px;
+  width: 100%;
+  display: grid;
+  gap: 12px;
+margin-bottom: 50px;
+}
+.statcard{
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+.statcard img{
+  width: 20px;
+  height: fit-content;
+  object-fit: contain;
+  padding-top: 9px;
+}
+
+.stattext{
+
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 25.5px;
+  text-align: left;
+  color: #222222;
+color: #1E1D1C;
+}
 
   .research .containers{
     display: flex;
@@ -300,6 +662,17 @@ background: #BFA16217;
     gap: 20px;
   }
 
+  .minicard{
+    margin-top: 30px;
+    background: transparent;
+    padding-inline: 30px;
+    padding-block: 60px;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 14px;
+    width: 100%;
+    display: grid;
+    gap: 20px;
+  }
   .servicebox{
     display: flex;
     flex-direction: column;
@@ -654,7 +1027,7 @@ text-align: left;
     gap: 10px;
 }
 
-.myform input, .etraderformgrid input, .etraderformgrid select{
+.myform input, .etraderformgrid input, .etraderformgrid select, .logincontainer  input{
     border: 1px solid var(--border-color);
     padding: 11px;
     width: 100%;
@@ -686,10 +1059,10 @@ color: white;
   justify-content: center;
   background-color: #C1A261;
 }
-.etraderformgrid input, .etraderformgrid select{
+.etraderformgrid input, .etraderformgrid select, .logincontainer  input{
   background-color:#FFFFFF ;
 }
-.myform button, .etraderformgrid button{
+.myform button, .etraderformgrid button, .logincontainer  button, .ffelxone button{
     background-color: #BFA162;
     padding: 10px;
     text-align: center;
@@ -703,6 +1076,15 @@ border: 1px solid #BFA162;
 outline-color: #BFA162;
 border-radius: 4px;
 min-width: 200px;
+}
+.boardperson img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.logincontainer  button{
+  margin-top: 7px;
+  width: 100%;
 }
 .formprogress{
   width: 100%;
@@ -718,16 +1100,66 @@ line-height: 30px;
 text-align: right;
 
 }
+.login{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.logincontainer{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 40%;
 
+}
+.login img{
+  padding-top: 30px;
+  width: 120px;
+  height: 120px;
+}
+.termstxt{
+  font-family: Poppins;
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: left;
+}
+.ctxt{
+  width: 100%;
+  font-family: Poppins;
+font-size: 13px;
+font-weight: 400;
+line-height: 24.29px;
+text-align: center;
+color: #414042;
+}
+.forgottxt{
+  width: 100%;
+  font-family: Poppins;
+font-size: 13px;
+font-weight: 400;
+line-height: 24.29px;
+text-align: right;
+color: #473A20;
+
+}
+.termtxt{
+  font-family: Poppins;
+font-size: 15px;
+font-weight: 400;
+line-height: 25px;
+text-align: left;
+color: #414142;
+}
 .progressdata span{
   font-size: 15px;
   font-weight: 500;
 }
 .imprtisltitle{
     font-family: Poppins;
-    font-size: 23px;
+    font-size: 20px;
     font-weight: 400;
-    line-height: 29px;  
+    line-height: 32px;  
 text-align: left;
 color: #414142;
 }
@@ -897,7 +1329,9 @@ line-height: 20px;
 }
 .etrader{
     margin-top: 30px;
+
     padding: 30px;
+    padding-bottom: 50px;
     background-color: #1d1d1d;
     display: flex;
     flex-direction: column;
@@ -906,6 +1340,7 @@ line-height: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    min-height: 500px;
 }
 
 .etrader h2{    font-family: Poppins;
@@ -1059,7 +1494,15 @@ display: none;
   outline: none;
   border: none;
 }
-
+.blogs{
+  background-color: transparent;
+  padding: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 14px;
+  width: 100%;
+  display: grid;
+  gap: 20px;
+}
 .blog{
   background-color: transparent;
   padding: 10px;
@@ -1094,17 +1537,55 @@ gap: 6px;
 }
 
 .blogtitle{
-  font-family: Poppins;
-font-size: 17px;
-font-weight: 400;
-line-height: 22px;
-text-align: left;
+
+    font-family: Poppins;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 22px;
+    text-align: left;
+
 
 }
 
+.financeflex{
+  width: 100%;
+  display: flex;
+  gap: 30px;
+  margin-top: 30px;
+  background: #FFFFFF;
+margin-bottom: 50px;
+  box-shadow: 0px 4px 50px 15px #0000000D;
+
+}
+.financeflex img{
+  max-height: 450px;
+  
+}
+.ffelxone, .fflextwo, .financeflex img{
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+.ffelxone .ftitle{
+  font-family: 'Goudy Old Style', sans-serif;
+  font-size: 37px;
+font-weight: 700;
+line-height: 57.61px;
+text-align: left;
+color: #967D4A;
+padding-bottom: 9px;
+
+}
+.ffelxone .mybtn{
+
+}
+
+.ffelxone{
+  padding: 40px;
+}
 .blogbody{
   font-family: Poppins;
-font-size: 14px;
+font-size: 13px;
 font-weight: 400;
 line-height: 21px;
 text-align: left;
@@ -1119,4 +1600,210 @@ color: #414142;
     }
   
   
+  }
+
+
+  @media (max-width: 1008px) {
+    .links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: white;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        padding: 10px 0;
+    }
+    .miniherotext {
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      max-width: 99%;
+  }
+  .iamhero{
+    max-width: 90%;
+    width: 100%;
+  }
+    .links a {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+    .iamflex{
+      flex-direction: column;
+    }
+    .menu-toggle {
+        display: block;
+        cursor: pointer;
+  
+        padding: 6px;
+    }
+  
+    .menu-toggle span {
+        display: block;
+        width: 25px;
+        height: 3px;
+        background-color: var(--body-color);
+        margin: 5px auto;
+    }
+  
+    .links.active {
+        display: flex;
+    }
+    .moduleflex .containers{
+      flex-direction: column;
+    }
+    .minihero {
+
+      min-height: 50vh;
+
+  }
+  .missionflex{
+    flex-direction: column;
+    gap: 10px;
+  }
+  .servicesgrid{
+    padding: 2px;
+  }
+  .hero{
+    height: 50vh;
+  }
+
+  .servicesgrid {
+
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    width: 100%;
+
+}
+.missionvalue{
+  padding: 0;
+}
+.modtwo{
+  padding: 0px;
+}
+.boardperson img{
+  height: 200px;
+}
+.toptxt{
+  max-width: 100%;
+}
+.imgflx{
+  flex-wrap: wrap;
+}
+.whytwo{
+  width: 100%;
+}
+.whyimp .containers, .whitemp .containers{
+  flex-direction: column;
+}
+footer{
+  padding: 0;
+}
+.faqcontainer{
+  width: 100%;
+  max-width: 100%;
+}
+.serviceimg {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+.icalflex{
+  flex-direction: column;
+}
+.logincontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 60%;
+}
+  }
+  
+
+  @media screen and (max-width:800px) {
+    .fblk {
+      display: flex;
+      gap: 10px;
+      flex-direction: column;
+      width: 100%;
+      gap: 14px;
+  }
+  .logincontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 89%;
+}
+  .etraderformgrid button{
+    margin-top: 10px;
+  }
+
+  .btns {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.etrader {
+  margin-top: 30px;
+  padding: 5px;
+
+}
+.etrader .btxt {
+  max-width: 94%;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+}
+  .etraderformgrid{
+    padding: 0;
+  }
+
+  .financeflex {
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-top: 30px;
+    background: #FFFFFF;
+    margin-bottom: 50px;
+    box-shadow: 0px 4px 50px 15px #0000000D;
+}
+
+  .miniherotext {
+    padding: 19px;
+  }
+  .termstxt{
+    margin-block: 10px;
+  }
+  .toptxt {
+    max-width: 90%;
+    font-size: 40px;
+    font-weight: 500;
+    line-height: 45px;
+}
+.btxt {
+  padding-top: 9px;
+  font-family: Poppins;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 28px;
+  text-align: center;
+  color: #FDFDFD;
+  max-width: 100%;
+}
+.containers {
+  width: 97%;
+  padding: 10px;
+}
+.flexsec{
+  flex-direction: column-reverse;
+}
+.sidetwo{
+  position: relative;
+  top: 0;
+}
   }
