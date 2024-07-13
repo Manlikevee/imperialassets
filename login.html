@@ -37,20 +37,30 @@
 
     <header>
       <div class="containers" id="header">
-        <div class="logo">
-          <img src="assets/IAML Logo-01.png" alt="" />
-        </div>
-
-        <div class="links">
-          <a href="">About</a>
-          <a href="">Services</a>
-          <a href="">Careers</a>
-          <a href="">E-Trader</a>
-          <a href="" class="login">Login</a>
-          <a href="" class="register">Signup</a>
-        </div>
+          <div class="logo">
+              <img src="assets/IAML Logo-01.png" alt="">
+          </div>
+          <div class="menu-toggle" onclick="toggleMenu()">
+              <span></span>
+              <span></span>
+              <span></span>
+          </div>
+          <div class="links">
+              <a href="about.html">About</a>
+              <a href="services.html">Services</a>
+              <a href="careers.html">Careers</a>
+              <a href="e-trader.html">E-Trader</a>
+         <a href="login.html" class="login">Login</a>
+         <a href="etraderform.html" class="register">Signup</a>
+          </div>
       </div>
-    </header>
+  </header>
+  <script>
+      function toggleMenu() {
+          const links = document.querySelector('.links');
+          links.classList.toggle('active');
+      }
+  </script>
     <div class="ovl"></div>
     <main>
       <div class="containers etarderform login">
@@ -91,69 +101,96 @@
     </main>
 
     <footer>
+
+
       <div class="containers">
-        <div class="footersec">
-          <div class="footertop">Explore</div>
-          <div class="footerbtm">
-            <a href=""> About </a>
-            <a href=""> Board of Directors </a>
-            <a href=""> Management </a>
-            <a href=""> Careers </a>
-          </div>
-        </div>
+          <div class="footersec">
+              <div class="footertop">Explore</div>
+              <div class="footerbtm">
+                  <a href="about.html">
+                      About
 
-        <div class="footersec">
-          <div class="footertop">Our Businesses</div>
-          <div class="footerbtm">
-            <a href="">Imperial Asset Managers Limited</a>
-            <a href="">Imperial Capital Advisers Limited</a>
-          </div>
-        </div>
+                  </a>
+                  <a href="services.html">
 
-        <div class="footersec">
-          <div class="footertop">Our Newsfeed</div>
-          <div class="footerbtm">
-            <a href=""> All News</a>
-            <a href="">Research and Insights</a>
-            <a href="">Blog</a>
-            <a href="">Policies</a>
-            <a href="">Terms & Conditions</a>
-          </div>
-        </div>
+                      Board of Directors
 
-        <div class="footersec">
-          <div class="footertop">Subscribe to our newsletter</div>
-          <div class="footerbtm">
-            Weekly email about trends shaping markets, industries and the global
-            economy.
-          </div>
-          <input type="text" class="footerinput" />
-          <button>Submit</button>
-        </div>
+                  </a>
+                  <a href="services.html">
 
-        <div class="footersec">
-          <div class="footertop">Office Address</div>
-          <div class="footerbtm">
-            <a href=""><b>Lagos Office:</b></a>
-            <a href=""
-              >THE EBENEZER PLACE 148A, Ikeja Way Off Association Road Dolphin
-              Estate, Ikoyi, Lagos.</a
-            >
-          </div>
-        </div>
+                      Management
 
-        <div class="footersec">
-          <div class="footertop">Reach Us</div>
-          <div class="footerbtm">
-            <a href=""><b>Send a Message</b></a>
-            <a href="mailto:talk2us@imperialasset.com.ng"
-              >talk2us@imperialasset.com.ng</a
-            >
-            <a href="#"> 234 -1- 4637483, 08067035949, 09125007249 </a>
+                  </a>
+                  <a href="careers.html">
+
+                      Careers
+                  </a>
+
+              </div>
           </div>
-        </div>
+
+          <div class="footersec">
+              <div class="footertop">Our Businesses</div>
+              <div class="footerbtm">
+                  <a href="iaml.html">Imperial Asset Managers Limited</a>
+                  <a href="ical.html">Imperial Capital Advisers Limited</a>
+
+
+
+              </div>
+          </div>
+
+          <div class="footersec">
+              <div class="footertop">Our Newsfeed</div>
+              <div class="footerbtm">
+                  <a href=""> All News</a>
+                  <a href="research.html">Research and Insights</a>
+                  <a href="">Blog</a>
+                  <a href="">Policies</a>
+                  <a href="">Terms & Conditions</a>
+              </div>
+          </div>
+
+
+          <div class="footersec">
+              <div class="footertop">Subscribe to our newsletter</div>
+              <div class="footerbtm">
+                  Weekly email about trends shaping markets, industries and the global
+                  economy.
+              </div>
+              <input type="text" class="footerinput">
+              <button>Submit</button>
+          </div>
+
+
+          <div class="footersec">
+              <div class="footertop">Office Address</div>
+              <div class="footerbtm">
+                  <a href=""><b>Lagos Office:</b></a>
+                  <a href="">THE EBENEZER PLACE 148A, Ikeja Way Off Association Road Dolphin Estate, Ikoyi, Lagos.</a>
+
+              </div>
+          </div>
+
+          <div class="footersec">
+              <div class="footertop">Reach Us</div>
+              <div class="footerbtm">
+                  <a href=""><b>Send a Message</b></a>
+                  <a href="mailto:talk2us@imperialasset.com.ng">talk2us@imperialasset.com.ng</a>
+                  <a href="#">
+
+
+                      234 -1- 4637483, 08067035949, 09125007249
+
+                  </a>
+
+              </div>
+          </div>
+          <div class="footersec">
+              <img src="assets/COMP.png" alt="">
+          </div>
       </div>
-    </footer>
+  </footer>
 
     <script></script>
   </body>

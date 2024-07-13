@@ -24,33 +24,43 @@
             <div class="logo">
                 <img src="assets/IAML Logo-01.png" alt="">
             </div>
-
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div class="links">
-                <a href="">About</a>
-                <a href="">Services</a>
-                <a href="">Careers</a>
-                <a href="">E-Trader</a>
-           <a href="" class="login">Login</a>
-           <a href="" class="register">Signup</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="careers.html">Careers</a>
+                <a href="e-trader.html">E-Trader</a>
+           <a href="login.html" class="login">Login</a>
+           <a href="etraderform.html" class="register">Signup</a>
             </div>
         </div>
     </header>
+    <script>
+        function toggleMenu() {
+            const links = document.querySelector('.links');
+            links.classList.toggle('active');
+        }
+    </script>
     <div class="ovl">
 
     </div>
 <main class="white">
 
-    <div class="hero research">
+    <div class="hero research financial_journey">
         <div class="containers">
             <div class="toptxt">
-                Security Trading
+                Empowering Your Financial Journey
             </div>
             <div class="btxt">
-                Trading online can be exciting, but it’s important to be reminded that there are risks involved. We encourage all our users to secure their accounts and trade responsibly to experience the best in online trading.
+                From in-depth equity and fixed-income reports to macroeconomic analyses and enterprise risk research, we equip you with the knowledge needed to optimize your investment portfolio.
             </div>
         
             <div class="herobtn" id="open-popup-btn">
-                Open an Account
+                Request for Service
             </div>
         
         </div>
@@ -61,33 +71,59 @@
    <br>
    <br>  
 <div class="imprtisltitle">
-    Security trading typically involves buying and selling financial instruments such as stocks, bonds, options, and other securities in various financial markets.
+    Stay ahead of the curve with our exhaustive market analyses. From microeconomic reports on specific industries to trends influencing global markets
 </div>
 <br>
 <div class="imperialsubtitle">
-    Our stockbroking services are enhanced by cutting edge technology, which provides real time information to our customers concerning execution of their orders and performance of their investments. Our primary role as stockbrokers is timely and efficient execution of orders (buys and sells), in order to ensure that maximum benefits accrue to our customers. These services include:
+    By providing expert research and analysis services which is used as an input in our business process and which aids our customers in making cutting edge investment decisions. The department is responsible for keeping Imperial on the cutting edge of investment management by providing high-quality research support to all our business units. Imperial possesses strong competences in equity research, bond and fixed income research, economic research, corporate finance research, macro/micro research and analysis. The research services also include:
 </div>
 <br>
 
 <div class="flexsec">
     <div class="sideone">
         <div class="accordiontab">
-            <div class="acctext">Institutional Trading</div>
+            <div class="acctext">Equity Reports</div>
             <div class="accbody">
-                Institutional trading involves financial transactions conducted by large entities such as mutual funds, pension funds, and hedge funds. These entities trade in substantial volumes, impacting market dynamics. Their decisions are often based on in-depth research, complex strategies, and a focus on long-term investment goals.
+                Equity reports analyze and assess the performance and potential of publicly traded stocks. They provide insights into a company's financial health, growth prospects, and valuation, assisting investors in making informed decisions.
             </div>
         </div>
         <div class="accordiontab">
-            <div class="acctext">Institutional Trading</div>
+            <div class="acctext">Bonds and Fixed Income Reports</div>
         </div>
         <div class="accordiontab">
-            <div class="acctext">Risk Arbitrage Trading</div>
+            <div class="acctext">Macro Economic Reports</div>
         </div>
         <div class="accordiontab">
-            <div class="acctext">Market Making</div>
+            <div class="acctext">Enterprise Risk Research</div>
         </div>
         <div class="accordiontab">
-            <div class="acctext">Private Equity Trading</div>
+            <div class="acctext">Micro Economic Reports</div>
+        </div>
+    </div>
+    <div class="sidetwo">
+        <img src="assets/Rectangle 72.png" alt="">
+    </div>
+</div>
+
+<div class="flexsec rew">
+    <div class="sideone">
+        <div class="accordiontab">
+            <div class="acctext">Corporate Financial Analysis and Spreadsheet Modeling</div>
+            <div class="accbody">
+                These reports involve a detailed examination of a company's financial statements, utilizing spreadsheet models for in-depth financial analysis. They help investors and analysts understand key financial metrics and trends.
+            </div>
+        </div>
+        <div class="accordiontab">
+            <div class="acctext">Weekly and Quarterly Periodicals</div>
+        </div>
+        <div class="accordiontab">
+            <div class="acctext">Imperial Equity Research</div>
+        </div>
+        <div class="accordiontab">
+            <div class="acctext">Imperial Weekly Investment Guide</div>
+        </div>
+        <div class="accordiontab">
+            <div class="acctext">Imperial Daily Stock Market Report / Imperial Weekly Stock Market Report</div>
         </div>
     </div>
     <div class="sidetwo">
@@ -97,22 +133,22 @@
 
 <br>
 <br>
-<div class="etrader">
-    <br>
-    <h2>E-Trader</h2>
-    <div class="btxt">
-        With Imperiale-trader, you can trade your securities online, in real time with as little as a minimum account opening balance of N5,000 only from wherever you are. We provide a comprehensive range of services to meet and execute on your investment requirements
+<h3>Download Research Papers</h3>
+<div class="reportsection">
+    <div class="pills">
+      <div class="pill pillactive">Asset Management</div>
+      <div class="pill">E-Trader</div>
+      <div class="pill">Security Trading</div>
     </div>
 
-    <div class="btns">
-        <button>Open an Individual Account</button>
-        <button>Open a Cooperate Account</button>
+    <div class="researchgrid" id="researchgrid">
+ 
+ 
     </div>
-</div>
-
+  </div>
 <br>
 <br>
-
+<br>
 <div class="faqtitle">
     Frequently asked questions
 </div>
@@ -195,28 +231,33 @@
 </main>
 <br>
 <br>
+
+
+
 <footer>
+
+
     <div class="containers">
         <div class="footersec">
             <div class="footertop">Explore</div>
             <div class="footerbtm">
-                <a href="">
+                <a href="about.html">
                     About
 
                 </a>
-                <a href="">
+                <a href="services.html">
 
-Board of Directors
-
-                </a>
-                <a href="">
-
-Management
+                    Board of Directors
 
                 </a>
-                <a href="">
+                <a href="services.html">
 
-Careers
+                    Management
+
+                </a>
+                <a href="careers.html">
+
+                    Careers
                 </a>
 
             </div>
@@ -225,10 +266,10 @@ Careers
         <div class="footersec">
             <div class="footertop">Our Businesses</div>
             <div class="footerbtm">
-                <a href="">Imperial Asset Managers Limited</a>
-                <a href="">Imperial Capital Advisers Limited</a>
-                
-                
+                <a href="iaml.html">Imperial Asset Managers Limited</a>
+                <a href="ical.html">Imperial Capital Advisers Limited</a>
+
+
 
             </div>
         </div>
@@ -237,14 +278,14 @@ Careers
             <div class="footertop">Our Newsfeed</div>
             <div class="footerbtm">
                 <a href=""> All News</a>
-                <a href="">Research and Insights</a>
+                <a href="research.html">Research and Insights</a>
                 <a href="">Blog</a>
                 <a href="">Policies</a>
                 <a href="">Terms & Conditions</a>
             </div>
         </div>
 
-        
+
         <div class="footersec">
             <div class="footertop">Subscribe to our newsletter</div>
             <div class="footerbtm">
@@ -255,13 +296,13 @@ Careers
             <button>Submit</button>
         </div>
 
-        
+
         <div class="footersec">
             <div class="footertop">Office Address</div>
             <div class="footerbtm">
                 <a href=""><b>Lagos Office:</b></a>
                 <a href="">THE EBENEZER PLACE 148A, Ikeja Way Off Association Road Dolphin Estate, Ikoyi, Lagos.</a>
-      
+
             </div>
         </div>
 
@@ -271,21 +312,55 @@ Careers
                 <a href=""><b>Send a Message</b></a>
                 <a href="mailto:talk2us@imperialasset.com.ng">talk2us@imperialasset.com.ng</a>
                 <a href="#">
-                    
-                    
+
+
                     234 -1- 4637483, 08067035949, 09125007249
 
                 </a>
-      
+
             </div>
+        </div>
+        <div class="footersec">
+            <img src="assets/COMP.png" alt="">
         </div>
     </div>
 </footer>
 
 
 
-
 <script>
+
+
+const researchData = [
+    {
+        title: "Elusive Safety: The New Geography of Capital Flows and Risk",
+        size: "5MB",
+        fileTypeIcon: "assets/vscode-icons_file-type-pdf2 (1).png",
+        access: "Free"
+    },
+    {
+        title: "Understanding the Digital Economy",
+        size: "3MB",
+        fileTypeIcon: "assets/vscode-icons_file-type-pdf2 (1).png",
+        access: "Free"
+    },
+    {
+        title: "Advancements in Artificial Intelligence",
+        size: "4MB",
+        fileTypeIcon: "assets/vscode-icons_file-type-pdf2 (1).png",
+        access: "Premium"
+    },
+    {
+        title: "Advancements in Artificial Intelligence",
+        size: "4MB",
+        fileTypeIcon: "assets/vscode-icons_file-type-pdf2 (1).png",
+        access: "Premium"
+    }
+    // Add more research data objects as needed
+];
+
+
+
 document.querySelectorAll('.faqhead').forEach(faqhead => {
     faqhead.addEventListener('click', function() {
         const faqbody = this.nextElementSibling;
@@ -398,6 +473,51 @@ createblogcard(blogdata)
 }
 
 createservicedata(servicedata);
+
+
+
+
+
+
+function createResearchCards(dataArray) {
+    const researchGrid = document.getElementById('researchgrid');
+    let cardsHTML = '';
+
+    dataArray.forEach(data => {
+        const accessClass = data.access.toLowerCase(); // "free" or "paid"
+        cardsHTML += `
+            <div class="researchcard">
+                <div class="researchtop">
+                    <div class="researchbig">
+                        ${data.title}
+                    </div>
+                    <div class="researchsmall ${accessClass}">
+                        ${data.access}
+                    </div>
+                </div>
+                <div class="researchtop resbtm">
+                    <div class="filedetails">
+                        ${data.size} | <img src="${data.fileTypeIcon}" alt="">
+                    </div>
+                    <div class="actionpanel">
+                        <div class="icon">
+                            <span class="material-symbols-outlined">visibility</span>
+                        </div>
+                        <div class="icon">
+                            <span class="material-symbols-outlined">link</span>
+                        </div>
+                        <div class="icon">
+                            <span class="material-symbols-outlined">download</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        `;
+    });
+
+    researchGrid.innerHTML = cardsHTML;
+}
+createResearchCards(researchData);
 </script>
 
 </body>

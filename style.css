@@ -213,7 +213,25 @@
     url('/assets/martin-martz-X5fEKadz0Xc-unsplash\ \(1\).jpg');
   }
 
+.advisory{
+  background-image: linear-gradient(rgba(34, 34, 34, 0.48), rgba(34, 34, 34, 0.48)), 
+  url('/assets/advisory.png');
+}
 
+.etradersplash{
+  background-image: linear-gradient(rgba(34, 34, 34, 0.48), rgba(34, 34, 34, 0.48)), 
+  url('/assets/etrader.png');
+}
+
+.security{
+  background-image: linear-gradient(rgba(34, 34, 34, 0.48), rgba(34, 34, 34, 0.48)), 
+  url('/assets/security.png');
+}
+
+.financial_journey{
+  background-image: linear-gradient(rgba(34, 34, 34, 0.48), rgba(34, 34, 34, 0.48)), 
+  url('/assets/journey.png');
+}
   .careers{
     background-size: cover;
     background-position: top;
@@ -1657,6 +1675,7 @@ color: #414142;
     .minihero {
 
       min-height: 50vh;
+      height: fit-content;
 
   }
   .missionflex{
@@ -1666,10 +1685,15 @@ color: #414142;
   .servicesgrid{
     padding: 2px;
   }
-  .hero{
-    height: 50vh;
-  }
-
+  .hero {
+    min-height: 50vh;
+    height: fit-content;
+    padding-block: 30px;
+    padding-inline: 3px;
+}
+.links{
+  padding-inline: 20px;
+}
   .servicesgrid {
 
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -1720,7 +1744,10 @@ footer{
 }
   }
   
-
+.footersec img{
+  width: 100%;
+  object-fit: contain;
+}
   @media screen and (max-width:800px) {
     .fblk {
       display: flex;

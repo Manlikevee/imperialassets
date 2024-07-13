@@ -32,15 +32,20 @@
                 <span></span>
             </div>
             <div class="links">
-                <a href="">About</a>
-                <a href="">Businesses</a>
-                <a href="">Careers</a>
-                <a href="">Research</a>
+                <a href="about.html">About</a>
+                <a href="#">Businesses</a>
+                <a href="careers.html">Careers</a>
+                <a href="research.html">Research</a>
  
             </div>
         </div>
     </header>
-
+    <script>
+        function toggleMenu() {
+            const links = document.querySelector('.links');
+            links.classList.toggle('active');
+        }
+    </script>
     <div class="ovl">
 
     </div>
@@ -363,6 +368,8 @@
 
         </div>
     </div>
+
+    
     <footer>
 
 
@@ -370,21 +377,21 @@
             <div class="footersec">
                 <div class="footertop">Explore</div>
                 <div class="footerbtm">
-                    <a href="">
+                    <a href="about.html">
                         About
 
                     </a>
-                    <a href="">
+                    <a href="services.html">
 
                         Board of Directors
 
                     </a>
-                    <a href="">
+                    <a href="services.html">
 
                         Management
 
                     </a>
-                    <a href="">
+                    <a href="careers.html">
 
                         Careers
                     </a>
@@ -395,8 +402,8 @@
             <div class="footersec">
                 <div class="footertop">Our Businesses</div>
                 <div class="footerbtm">
-                    <a href="">Imperial Asset Managers Limited</a>
-                    <a href="">Imperial Capital Advisers Limited</a>
+                    <a href="iaml.html">Imperial Asset Managers Limited</a>
+                    <a href="ical.html">Imperial Capital Advisers Limited</a>
 
 
 
@@ -407,7 +414,7 @@
                 <div class="footertop">Our Newsfeed</div>
                 <div class="footerbtm">
                     <a href=""> All News</a>
-                    <a href="">Research and Insights</a>
+                    <a href="research.html">Research and Insights</a>
                     <a href="">Blog</a>
                     <a href="">Policies</a>
                     <a href="">Terms & Conditions</a>
@@ -448,6 +455,9 @@
                     </a>
 
                 </div>
+            </div>
+            <div class="footersec">
+                <img src="assets/COMP.png" alt="">
             </div>
         </div>
     </footer>
@@ -524,12 +534,7 @@
 
         createservicedata(servicedata);
     </script>
-<script>
-    function toggleMenu() {
-        const links = document.querySelector('.links');
-        links.classList.toggle('active');
-    }
-</script>
+
 </body>
 
 </html>

@@ -24,23 +24,33 @@
             <div class="logo">
                 <img src="assets/IAML Logo-01.png" alt="">
             </div>
-
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
             <div class="links">
-                <a href="">About</a>
-                <a href="">Services</a>
-                <a href="">Careers</a>
-                <a href="">E-Trader</a>
-           <a href="" class="login">Login</a>
-           <a href="" class="register">Signup</a>
+                <a href="about.html">About</a>
+                <a href="services.html">Services</a>
+                <a href="careers.html">Careers</a>
+                <a href="e-trader.html">E-Trader</a>
+           <a href="login.html" class="login">Login</a>
+           <a href="etraderform.html" class="register">Signup</a>
             </div>
         </div>
     </header>
+    <script>
+        function toggleMenu() {
+            const links = document.querySelector('.links');
+            links.classList.toggle('active');
+        }
+    </script>
     <div class="ovl">
 
     </div>
 <main class="white">
 
-    <div class="hero research">
+    <div class="hero research advisory">
         <div class="containers">
             <div class="toptxt">
                 Get Advice on how to Manage Finance and Assets Efficiently.
@@ -224,27 +234,29 @@ The Financial Advisory services also cover the following areas:
 
 
 <footer>
+
+
     <div class="containers">
         <div class="footersec">
             <div class="footertop">Explore</div>
             <div class="footerbtm">
-                <a href="">
+                <a href="about.html">
                     About
 
                 </a>
-                <a href="">
+                <a href="services.html">
 
-Board of Directors
-
-                </a>
-                <a href="">
-
-Management
+                    Board of Directors
 
                 </a>
-                <a href="">
+                <a href="services.html">
 
-Careers
+                    Management
+
+                </a>
+                <a href="careers.html">
+
+                    Careers
                 </a>
 
             </div>
@@ -253,10 +265,10 @@ Careers
         <div class="footersec">
             <div class="footertop">Our Businesses</div>
             <div class="footerbtm">
-                <a href="">Imperial Asset Managers Limited</a>
-                <a href="">Imperial Capital Advisers Limited</a>
-                
-                
+                <a href="iaml.html">Imperial Asset Managers Limited</a>
+                <a href="ical.html">Imperial Capital Advisers Limited</a>
+
+
 
             </div>
         </div>
@@ -265,14 +277,14 @@ Careers
             <div class="footertop">Our Newsfeed</div>
             <div class="footerbtm">
                 <a href=""> All News</a>
-                <a href="">Research and Insights</a>
+                <a href="research.html">Research and Insights</a>
                 <a href="">Blog</a>
                 <a href="">Policies</a>
                 <a href="">Terms & Conditions</a>
             </div>
         </div>
 
-        
+
         <div class="footersec">
             <div class="footertop">Subscribe to our newsletter</div>
             <div class="footerbtm">
@@ -283,13 +295,13 @@ Careers
             <button>Submit</button>
         </div>
 
-        
+
         <div class="footersec">
             <div class="footertop">Office Address</div>
             <div class="footerbtm">
                 <a href=""><b>Lagos Office:</b></a>
                 <a href="">THE EBENEZER PLACE 148A, Ikeja Way Off Association Road Dolphin Estate, Ikoyi, Lagos.</a>
-      
+
             </div>
         </div>
 
@@ -299,13 +311,16 @@ Careers
                 <a href=""><b>Send a Message</b></a>
                 <a href="mailto:talk2us@imperialasset.com.ng">talk2us@imperialasset.com.ng</a>
                 <a href="#">
-                    
-                    
+
+
                     234 -1- 4637483, 08067035949, 09125007249
 
                 </a>
-      
+
             </div>
+        </div>
+        <div class="footersec">
+            <img src="assets/COMP.png" alt="">
         </div>
     </div>
 </footer>
