@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+    <title>navbar</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="containers" id="header">
+            <div class="logo">
+                <img src="assets/IAML Logo-01 (1).png" alt="">
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="links">
+                <a href="about.html">About </a>
+
+                <div class="menu">
+                    <a onclick="openDropDown()" class="businessLink" href="#">Businesses <img class="arrow"
+                            src="./assets/arrowdown.svg" alt=""></a>
+                    <div class="dropDown">
+                        <a href="ical.html">iCal</a>
+                        <a href="iamlhome.html">Iaml</a>
+                    </div>
+                </div>
+                <a href="careers.html">Careers</a>
+                <a href="research.html">Research</a>
+
+            </div>
+        </div>
+    </header>
+
+    <script>
+        function toggleMenu() {
+            const links = document.querySelector('.links');
+            links.classList.toggle('active');
+        }
+
+        function openDropDown() {
+            const dropDown = document.querySelector(".dropDown")
+            dropDown.classList.toggle("open")
+        }
+    </script>
+    <div class="ovl">
+
+    </div>
+
+</body>
+
+</html>
