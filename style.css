@@ -269,11 +269,13 @@ text-align: left;
 
 }
 .missionhead{
-  width: 25%;
+  width: 35%;
+  padding-left: 60px;
 }
 .missionvalue{
   padding-right: 30px;
   width: 100%;
+  font-size: 18px;
 }
 
 .moduleflex .containers{

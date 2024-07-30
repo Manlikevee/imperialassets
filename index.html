@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Imperial Asset Managers Limited – We are Imperial….Proudly Imperial</title>
+
+<meta name="description" content="Welcome to Imperial Asset Managers Limited. We specialize in Securities Trading, Investment Advisory, Financial Advisory, Research, and provide an advanced platform with our Imperial e-Trader service.">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    </head>
+
+<body>
+<style>
+    .carousel {
+  min-height: 82vh;
+  display: grid;
+  grid-template-rows: 1fr 3fr 1.5fr;
+  grid-template-columns: 50px 1fr 1fr 1fr 1fr 50px;
+  row-gap: 1.4vh;
+  position: relative;
+}
+
+.carousel a {
+    width: fit-content !important;
+    min-width: fit-content !important;
+}
+.carousel .ainflextwo{
+    color: white; max-width: 50%;
+    padding-bottom: 7px;
+}
+.progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 5px;
+  width: 100%;
+}
+.progress-bar__fill {
+  width: 0;
+  height: inherit;
+  background: #C1A261;
+  transition: all 0.16s;
+}
+.progress-bar--primary {
+  z-index: 2;
+}
+
+.main-post-wrapper {
+  grid-row: 1/4;
+  grid-column: 1/7;
+  position: relative;
+}
+
+.slides {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.main-post {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+.main-post__image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+}
+.main-post__image img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main-post__image::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(14, 13, 14, 0.5);
+}
+.main-post__content {
+  position: absolute;
+  top: 40%;
+  left: 4%;
+  transform: translateY(-40%);
+  color: #fff;
+  width: 90%;
+}
+.main-post__tag-wrapper {
+  margin: 0;
+  display: inline-flex;
+  overflow: hidden;
+}
+.main-post__tag {
+  font-size: 0.95em;
+  background: #C1A261;
+  padding: 6px 18px;
+}
+.main-post__title {
+  font-weight: 700;
+  font-size: 1.95em;
+  line-height: 1.25;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+.main-post__link {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: inline-flex;
+  align-items: center;
+}
+.main-post__link-text {
+  font-size: 0.9em;
+}
+.main-post__link-icon--arrow {
+  margin-left: 12px;
+}
+.main-post__link-icon--play-btn {
+  margin-right: 12px;
+}
+
+.main-post__link:hover .main-post__link-text,
+.main-post__link:hover .main-post__link-icon--arrow path {
+  color: #C1A261;
+  stroke: #C1A261;
+}
+
+.main-post--active {
+  top: 0;
+  z-index: 1;
+  transition: top 0.9s 0.4s ease-out;
+}
+
+.main-post--not-active {
+  top: 100%;
+  z-index: 0;
+  transition: top 0.75s 2s;
+}
+
+.main-post.main-post--active .main-post__tag-wrapper {
+  width: 25%;
+  transition: all 0.98s 1.9s;
+}
+
+.main-post.main-post--not-active .main-post__tag-wrapper {
+  width: 0;
+  transition: width 0.3s 0.2s;
+}
+
+.main-post.main-post--active .main-post__title {
+  opacity: 1;
+  transform: translateY(0);
+  transition: opacity 0.8s 1.42s, transform 0.5s 1.4s;
+}
+
+.main-post.main-post--not-active .main-post__title {
+  transform: translateY(40px);
+  opacity: 0;
+  transition: transform 0.2s 0.35s, opacity 0.5s 0.2s;
+}
+
+.main-post.main-post--active .main-post__link {
+  opacity: 1;
+  transition: opacity 0.9s 2.2s;
+}
+
+.main-post.main-post--not-active .main-post__link {
+  opacity: 0;
+  transition: opacity 0.5s 0.2s;
+}
+
+.posts-wrapper {
+  grid-row: 3/4;
+  grid-column: 3/6;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  -moz-column-gap: 14px;
+       column-gap: 14px;
+  z-index: 1;
+}
+
+.post {
+  background: rgba(14, 13, 14, 0.6);
+  opacity: 0.3;
+  color: #fff;
+  position: relative;
+  padding: 16px 20px;
+  height: fit-content;
+}
+.post__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8em;
+}
+.post__tag {
+  color: #80837e;
+}
+.post__title {
+ 
+  font-weight: 400;
+  font-size: 0.95em;
+  line-height: 1.5;
+}
+.post--active {
+  opacity: 1;
+  background: rgba(14, 13, 14, 0.75);
+}
+.post:not(.post--active) {
+  pointer-events: none;
+}
+
+.hide-on-mobile {
+  display: none;
+}
+@media screen and (max-width:800px) {
+    .carousel .ainflextwo{
+    color: white; max-width: 100%;
+}
+    
+}
+@media screen and (min-width: 768px) {
+  .main-post__title {
+    font-size: 2.0em;
+  }
+
+}
+@media screen and (min-width: 1024px) {
+  .hide-on-mobile {
+    display: grid;
+  }
+
+  .posts-wrapper {
+    grid-column: 2/6;
+  }
+
+  .hide-on-desktop {
+    display: none;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .main-post__content {
+    width: 45%;
+  }
+
+  .posts-wrapper {
+    grid-column: 3/6;
+  }
+}
+</style>
+
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Popup -->
+
+
+
+
+    <header>
+        <div class="containers" id="header">
+            <div class="logo">
+                <img src="assets/IAML Logo-01 (1).png" alt="">
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="links">
+                <a href="about.html">About</a>
+                <a href="#">Businesses</a>
+                <a href="careers.html">Careers</a>
+                <a href="research.html">Research</a>
+ 
+            </div>
+        </div>
+    </header>
+    <script>
+        function toggleMenu() {
+            const links = document.querySelector('.links');
+            links.classList.toggle('active');
+        }
+    </script>
+    <div class="ovl">
+
+    </div>
+
+    <div class="carousel">
+        <div class="progress-bar progress-bar--primary hide-on-desktop">
+          <div class="progress-bar__fill"></div>
+        </div>
+      
+      <div class="main-post-wrapper">
+        
+        <div class="slides">
+          <article class="main-post main-post--active">
+            <div class="main-post__image">
+              <img src="Rectangle 22.png" alt="imperialassets" />
+            </div>
+            <div class="main-post__content"> 
+              <h1 class="main-post__title">A Legacy of Financial Mastery</h1>
+              <p class="ainflextwo">
+                Step into the realm of unparalleled success with , where we redefine the landscape of stockbroking and advisory services. Bask in the glory of a legacy built on expertise, innovation, and a relentless pursuit of financial excellence.
+              </p>
+              <a class="main-post__link herobtn" href="about.html" >
+                <span class="main-post__link-text">Explore</span>
+      
+              </a>
+            </div>
+          </article>
+          <article class="main-post main-post--not-active">
+            <div class="main-post__image">
+                <img src="Rectangle 22.png" alt="imperialassets" />
+            </div>
+            <div class="main-post__content">
+              <!-- <div class="main-post__tag-wrapper">
+                <span class="main-post__tag">Video</span>
+              </div> -->
+              <h1 class="main-post__title">A Stockbroking and Financial Advisory Company</h1>
+              <p class="ainflextwo">
+                Imperial Asset Managers Limited was incorporated in Nigeria on October 19, 2006 as a private limited liability company. The Company commenced business operations on 3rd September 2007. We are dedicated solely to managing assets for carefully select clientele that desire high quality, specialized and personalized niche products and services.
+              </p>
+    
+              <a class="main-post__link herobtn" href="iaml.html" >
+                <span class="main-post__link-text">Explore</span>
+      
+              </a>
+
+
+            </div>
+          </article>
+
+
+          <article class="main-post main-post--not-active">
+            <div class="main-post__image">
+                <img src="Rectangle 22.png" alt="imperialassets" />
+            </div>
+            <div class="main-post__content">
+                <h1 class="main-post__title">Portfolio Management</h1>
+                <p class="ainflextwo">
+                  Imperial Asset Managers Limited was incorporated in Nigeria on October 19, 2006 as a private limited liability company. The Company commenced business operations on 3rd September 2007. We are dedicated solely to managing assets for carefully select clientele that desire high quality, specialized and personalized niche products and services.
+                </p>
+      
+                <!-- <a class="main-post__link herobtn" href="iaml.html" >
+                  <span class="main-post__link-text">Explore</span>
+        
+                </a> -->
+            </div>
+          </article>
+
+
+
+
+          <article class="main-post main-post--not-active">
+            <div class="main-post__image">
+                <img src="Rectangle 22.png" alt="imperialassets" />
+            </div>
+            <div class="main-post__content">
+              <!-- <div class="main-post__tag-wrapper">
+                <span class="main-post__tag">News</span>
+              </div> -->
+              <h1 class="main-post__title">Security Trading
+              </h1>
+ 
+              <p class="ainflextwo">
+                Our stockbroking services are enhanced by cutting edge technology, which provides real time information to our customers concerning execution of their orders and performance of their investments. Our primary role as stockbrokers is timely and efficient execution of orders (buys and sells), in order to ensure that maximum benefits accrue to our customers.
+              </p>
+    
+              <a class="main-post__link herobtn" href="securitytrading.html" >
+                <span class="main-post__link-text">Explore</span>
+      
+              </a>
+            </div>
+          </article>
+        
+          
+        </div>
+    </div>
+      
+      <div class="posts-wrapper hide-on-mobile">
+        <article class="post post--active">
+          <div class="progress-bar">
+            <div class="progress-bar__fill"></div>
+          </div>
+          <div class="post__header">
+          </div>
+          <h2 class="post__title">01
+            Imperial Group</h2>
+        </article>
+ 
+        <article class="post">
+            <div class="progress-bar">
+              <div class="progress-bar__fill"></div>
+            </div>
+            <div class="post__header">
+       
+    
+            </div>
+            <h2 class="post__title">02
+                Asset Management</h2>
+          </article>
+          <article class="post">
+            <div class="progress-bar">
+              <div class="progress-bar__fill"></div>
+            </div>
+            <div class="post__header">
+       
+    
+            </div>
+            <h2 class="post__title">03
+                Portfolio Management</h2>
+          </article>
+
+          <article class="post">
+            <div class="progress-bar">
+              <div class="progress-bar__fill"></div>
+            </div>
+            <div class="post__header">
+       
+    
+            </div>
+            <h2 class="post__title">04
+                Security Trading</h2>
+          </article>
+      </div>
+
+
+      </div>
+
+<script>
+    let mainPosts = document.querySelectorAll(".main-post");
+let posts = document.querySelectorAll(".post");
+
+let i = 0;
+let postIndex = 0;
+let currentPost = posts[postIndex];
+let currentMainPost = mainPosts[postIndex];
+
+let progressInterval = setInterval(progress, 50); // 180
+
+function progress() {
+  if (i === 100) {
+    i = -5;
+    // reset progress bar
+    currentPost.querySelector(".progress-bar__fill").style.width = 0;
+    document.querySelector(
+      ".progress-bar--primary .progress-bar__fill"
+    ).style.width = 0;
+    currentPost.classList.remove("post--active");
+
+    postIndex++;
+
+    currentMainPost.classList.add("main-post--not-active");
+    currentMainPost.classList.remove("main-post--active");
+
+    // reset postIndex to loop over the slides again
+    if (postIndex === posts.length) {
+      postIndex = 0;
+    }
+
+    currentPost = posts[postIndex];
+    currentMainPost = mainPosts[postIndex];
+  } else {
+    i++;
+    currentPost.querySelector(".progress-bar__fill").style.width = `${i}%`;
+    document.querySelector(
+      ".progress-bar--primary .progress-bar__fill"
+    ).style.width = `${i}%`;
+    currentPost.classList.add("post--active");
+
+    currentMainPost.classList.add("main-post--active");
+    currentMainPost.classList.remove("main-post--not-active");
+  }
+}
+
+
+</script>
+    <main class="white">
+
+   
+
+
+        <div class="containers">
+
+            <br>
+  <br>
+  <br>
+  <style>
+.ssssss{
+    position: absolute;
+    width: 229px;
+    height: 200px;
+    margin-left: 10%;
+    margin-top: -108px;
+}
+
+.businessheader .containers{
+    font-family: 'Goudy Old Style', sans-serif !important;
+    font-size: 25px;
+    color: #C1A261;
+    padding: 0 ;
+}
+.businessboxes{
+    display: flex;
+    
+}
+.businessflex .containers{
+    padding: 0 !important;
+}
+.businessbox{
+    display: flex;
+    width: 100%;
+    border-right: 1px solid #000;
+    padding: 40px;
+}
+
+@media screen and (max-width:1000px) {
+    .businessboxes{
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+}
+  </style>
+
+<br>
+<br>
+            <div class="missionflex">
+                <div class="missionhead" style="padding-left: 0; max-width: 100%; font-family: 'Goudy Old Style', sans-serif !important;
+                font-size: 25px;
+                color: #C1A261;"><div class="iamhero" style="color: #C1A261; max-width: 100%; font-family: 'Goudy Old Style', sans-serif !important;
+    font-size: 30px;
+    color: #C1A261;">
+
+                    Our Mission
+    
+    
+                </div></div>
+                <div class="missionvalue">To share in the joy of enhancing our customer’s wealth, and experience the excitement of competing and winning in the market place. To seek superiority in all we undertake to do and to be among the top 10 stock broking firms in Nigeria.  <img src="logoutline2-min.png.png" alt="" class="ssssss"> </div>
+            </div>
+
+            <br>
+            <br>
+            
+            <br>
+            <br>
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="businessflex" style="background-color: #F1F1EE; ">
+        
+                <div class="businessheader" style="padding: 15px; border-block: 0.5px solid black;">
+                <div class="containers">
+                    Our Businesses
+                </div>
+                </div>
+                <div class="containers">
+                <div class="businessboxes">
+                    <div class="businessbox">
+                        <div class="modtwo">
+                            <b>Imperial Asset Managers Limited</b>
+                            <div class="ainflextwo">Imperial Asset Managers Limited was incorporated in Nigeria on October 19,
+                                2006 as a private limited liability company. Imperial is principally a stock broking and
+                                financial advisory company dedicated solely to managing assets for carefully select clientele
+                                that desire high quality, specialized and personalized niche products and services</div>
+                         
+                         <br>
+                         <br>
+                                <a href="iaml.html" class="herobtn" id="open-popup-btn" style="width: fit-content;">
+                                Explore IAML
+                            </a>
+                            <br>
+                            <br>
+                            <b>Licensed by</b>
+                            <div class="imgflx">
+                                <img src="assets/image 3 (1).png" alt=""><img src="assets/image 4 (1).png" alt=""><img src="assets/image 5 (3).png" alt=""><img src="assets/image 6 (2).png" alt="">
+                            </div>
+        
+                        </div>
+                    </div>
+                    <div class="businessbox" style="border-right: none;">
+                        <div class="modtwo">
+                            <b>Imperial Capital Advisers Limited</b>
+                            <div class="ainflextwo">Imperial Capital Advisers Limited was incorporated in Nigeria on October 19,
+                                2006 as a private limited liability company. Imperial is principally a stock broking and
+                                financial advisory company dedicated solely to managing assets for carefully select clientele
+                                that desire high quality, specialized and personalized niche products and services</div>
+                 
+                            <br>
+        <br>
+                            <a href="ical.html" class="herobtn" id="open-popup-btn" style="width: fit-content;">
+                                Explore ICAL
+                            </a>
+                            <br>
+                            <br>
+                            <b>Licensed by</b>
+                            <div class="imgflx">
+                                <img src="assets/image 3 (1).png" alt="">
+                            </div>
+        
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+        </div>
+        <br>
+        <br>
+        <br>
+        <div class="containers">
+     
+
+    
+            <br>
+            <div class="financeflex">
+                <div class="ffelxone">
+                    <div class="ftitle">
+                        Making distinct financial reports to the public
+                    </div>
+            
+                    <div class="accbody">
+              Imperial has offered detailed reports to keep its customers in tune with the financial progression of the company. View summary statements of our financial information across our group.
+            
+                    </div>
+            
+                    <br>
+                    <br>
+                    <button>Learn More</button>
+                </div>
+                <div class="fflextwo">
+                    <img src="assets/Rectangle 103.png" alt="">
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <style>
+              .minihero{
+                min-height: 80vh;
+                background-image: linear-gradient(rgba(34, 34, 34, 0.38), rgba(34, 34, 34, 0.38)), url('/prs.jpg');
+              }
+            </style>
+<div class="minihero " style="margin-top: 0;">
+  <div class="miniherotext">
+      <div class="minititle">From the Managers Desk: Our Business Restructuring || The power of now</div>
+      <div class="minibody">Dear Client, The last few months have witnessed many exciting and celebratory moments for Imperial Asset Managers serving you, our valued customer.</div>
+  </div>
+</div>
+
+            <br>
+            <br>
+            <h3>Newsfeed</h3>
+            <div class="servicesgrid blog" id="bloggrid">
+    
+                <div class="blogcard">
+            <div class="serviceimg">
+                <img src="assets/blog (1).png" alt="undefined">
+            </div>
+            <div class="blogtitle">
+                Imperial Asset is Certified a Great Place to Work!
+            </div>
+            <div class="blogbody">
+                Imperial Asset has earned an official certification as a Great Place to Work, with outstanding recognition in three distinct categories
+            </div>
+        </div>
+        
+                
+        
+                <div class="blogcard">
+            <div class="serviceimg">
+                <img src="assets/blog (2).png" alt="undefined">
+            </div>
+            <div class="blogtitle">
+                Introducing the Imperial Asset: A New Era
+of Investment Opportunity
+            </div>
+            <div class="blogbody">
+                Abuja, November 1, 2023 – Imperial Asset, an industry-leading, integrated financial services group, is proud to announce the launch of the ...
+            </div>
+        </div>
+        
+                
+        
+                <div class="blogcard">
+            <div class="serviceimg">
+                <img src="assets/blog (3).png" alt="undefined">
+            </div>
+            <div class="blogtitle">
+                Imperial called for 3 awards in three marketing countries.
+            </div>
+            <div class="blogbody">
+                Imperial Asset, an industry leading, integrated financial services Group, is proud to announce that it has been bestowed with two prestigious ...
+            </div>
+        </div>
+        
+                </div>
+
+        </div>
+
+
+<br>
+
+
+        <br>
+
+        </div>
+    </main>
+    <br>
+    <br>
+    <div class="hero research jteam">
+        <div class="containers">
+            <div class="toptxt">
+                Join Our Team
+            </div>
+            <div class="btxt">
+                Explore our careers page to learn more about how we can help you maximize your talent.
+            </div>
+
+            <a href="careers.html" class="herobtn" id="open-popup-btn">
+                Explore Careers
+            </a>
+
+        </div>
+    </div>
+    <br>
+    <br>
+    <div class="containers">
+        <!-- <h3>Discover More</h3> -->
+        <div class="servicesgrid" id="servicegrid">
+
+        </div>
+    </div>
+
+
+    <footer>
+
+
+        <div class="containers">
+            <div class="footersec">
+                <div class="footertop">Explore</div>
+                <div class="footerbtm">
+                    <a href="about.html">
+                        About
+
+                    </a>
+                    <a href="services.html">
+
+                        Board of Directors
+
+                    </a>
+                    <a href="services.html">
+
+                        Management
+
+                    </a>
+                    <a href="careers.html">
+
+                        Careers
+                    </a>
+
+                </div>
+            </div>
+
+            <div class="footersec">
+                <div class="footertop">Our Businesses</div>
+                <div class="footerbtm">
+                    <a href="iaml.html">Imperial Asset Managers Limited</a>
+                    <a href="ical.html">Imperial Capital Advisers Limited</a>
+
+
+
+                </div>
+            </div>
+
+            <div class="footersec">
+                <div class="footertop">Our Newsfeed</div>
+                <div class="footerbtm">
+                    <a href=""> All News</a>
+                    <a href="research.html">Research and Insights</a>
+                    <a href="">Blog</a>
+                    <a href="">Policies</a>
+                    <a href="">Terms & Conditions</a>
+                </div>
+            </div>
+
+
+            <div class="footersec">
+                <div class="footertop">Subscribe to our newsletter</div>
+                <div class="footerbtm">
+                    Weekly email about trends shaping markets, industries and the global
+                    economy.
+                </div>
+                <input type="text" class="footerinput">
+                <button>Submit</button>
+            </div>
+
+
+            <div class="footersec">
+                <div class="footertop">Office Address</div>
+                <div class="footerbtm">
+                    <a href=""><b>Lagos Office:</b></a>
+                    <a href="">THE EBENEZER PLACE 148A, Ikeja Way Off Association Road Dolphin Estate, Ikoyi, Lagos.</a>
+
+                </div>
+            </div>
+
+            <div class="footersec">
+                <div class="footertop">Reach Us</div>
+                <div class="footerbtm">
+                    <a href=""><b>Send a Message</b></a>
+                    <a href="mailto:talk2us@imperialasset.com.ng">talk2us@imperialasset.com.ng</a>
+                    <a href="#">
+
+
+                        234 -1- 4637483, 08067035949, 09125007249
+
+                    </a>
+
+                </div>
+            </div>
+            <div class="footersec">
+                <img src="assets/COMP.png" alt="">
+            </div>
+        </div>
+    </footer>
+
+
+
+
+    <script>
+        document.querySelectorAll('.faqhead').forEach(faqhead => {
+            faqhead.addEventListener('click', function () {
+                const faqbody = this.nextElementSibling;
+
+                if (faqbody.style.display === 'block') {
+                    faqbody.style.display = 'none';
+                    this.querySelector('span').innerHTML = 'expand_circle_down';
+                } else {
+                    faqbody.style.display = 'block';
+                    this.querySelector('span').innerHTML = 'expand_less';
+                }
+            });
+        });
+        const servicedata = [
+            {
+                tag: "Explore",
+                text: "Open Positions",
+                img: "assets/service (3).png",
+            },
+            {
+                tag: "Explore",
+                text: "Our Businesses",
+                img: "assets/service (4).png",
+            },
+            {
+                tag: "Explore",
+                text: "News Update",
+                img: "assets/service (5).png",
+            },
+            {
+                tag: "Explore",
+                text: "Research",
+                img: "assets/service (1).png",
+            },
+            {
+                tag: "Explore",
+                text: "Mutual Funds",
+                img: "assets/service (2).png",
+            },
+
+        ]
+
+ 
+
+
+
+        function createservicedata(dataArray) {
+            const servicegrid = document.getElementById('servicegrid');
+            let cardsHTML = '';
+
+            dataArray.forEach(data => {
+
+                cardsHTML += `
+        <div class="servicebox">
+    <div class="serviceimg">
+        <img src="${data.img}" alt="${data.text}">
+    </div>
+    <div class="servicetag">${data.tag}</div>
+    <div class="servicetext">${data.text}</div>
+</div>
+        `;
+            });
+
+            servicegrid.innerHTML = cardsHTML;
+        }
+
+        createservicedata(servicedata);
+    </script>
+
+</body>
+
+</html>
