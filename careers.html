@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Imperial Asset Managers Limited –</title>
     <title>Imperial Asset Managers Limited – We are Imperial….Proudly Imperial</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -17,22 +17,45 @@
 
 
 
-  
     <header>
         <div class="containers" id="header">
-            <div class="logo">
+            <a href="/" class="logo">
                 <img src="assets/IAML Logo-01 (1).png" alt="">
+            </a>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
             </div>
-
             <div class="links">
-                <a href="">About</a>
-                <a href="">Businesses</a>
-                <a href="">Careers</a>
-                <a href="">Research</a>
- 
+                <a href="about.html">About </a>
+
+                <div class="menu">
+                    <a onclick="openDropDown()" class="businessLink" href="#">Businesses <img class="arrow"
+                            src="./assets/arrowdown.svg" alt=""></a>
+                    <div class="dropDown">
+                        <a href="ical.html">iCal</a>
+                        <a href="iamlhome.html">Iaml</a>
+                    </div>
+                </div>
+                <a href="careers.html">Careers</a>
+                <a href="research.html">Research</a>
+
             </div>
         </div>
     </header>
+
+    <script>
+        function toggleMenu() {
+            const links = document.querySelector('.links');
+            links.classList.toggle('active');
+        }
+
+        function openDropDown() {
+            const dropDown = document.querySelector(".dropDown")
+            dropDown.classList.toggle("open")
+        }
+    </script>
     <div class="ovl">
 
     </div>
@@ -150,7 +173,7 @@ Imperial?
                 <div class="whyone whytwo">
                     Explore Open Positions at Imperial Asset Managers Limited
                 </div>
-                    <div class="servicesgrid  minicard" id="bloggrid">
+                <!-- <div class="servicesgrid  minicard" id="bloggrid">
   <div class="openrole">
     <small>SECURITIES</small>
     <div class="opentitle">
@@ -159,8 +182,6 @@ Imperial?
 
     <div class="exppos">Explore Position</div>
   </div>
-
-
   <div class="openrole">
     <small>SECURITIES</small>
     <div class="opentitle">
@@ -202,7 +223,10 @@ Imperial?
   </div>
 
                         
-                                            </div>
+                                            </div> -->
+
+                                            <h3 style="text-align: center; padding-top: 30px; display: flex; align-items: center; width: 80%;     width: 100%;
+                                            justify-content: center;">We Currently Have No Open Roles</h3>
                 </div>
                               </div>
 

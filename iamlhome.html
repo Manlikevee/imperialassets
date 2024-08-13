@@ -20,28 +20,51 @@
 
     <header>
         <div class="containers" id="header">
-            <div class="logo">
+            <a href="iamlhome.html" class="logo">
                 <img src="assets/IAML Logo-01.png" alt="">
-            </div>
+            </a>
             <div class="menu-toggle" onclick="toggleMenu()">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <div class="links">
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
+                <a href="about_iaml.html">About</a>
+                <!-- <a href="services.html">Services</a> -->
+                <div class="menu">
+                    <a onclick="openDropDown()" class="businessLink" href="#">Services <img class="arrow"
+                            src="./assets/arrowdown.svg" alt=""></a>
+                    <div class="dropDown">
+                        <a href="securitytrading.html">Security Trading</a>
+                        <a href="advisoryservice.html">Advisory Service</a>
+                
+                    </div>
+                </div>
                 <a href="careers.html">Careers</a>
                 <a href="e-trader.html">E-Trader</a>
            <a href="login.html" class="login">Login</a>
            <a href="etraderform.html" class="register">Signup</a>
             </div>
         </div>
+        <iframe style="overflow: hidden;" src="https://dataex.nasdotcng.com/market_snapshot2/price_ticker" width="100%" height="30" scrolling="no"><span style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" data-mce-type="bookmark" class="mce_SELRES_start">&#xFEFF;</span></iframe>
     </header>
+
+  
+<style>
+    .dropDown{
+        width: 200px;
+    }
+</style>
+
     <script>
         function toggleMenu() {
             const links = document.querySelector('.links');
             links.classList.toggle('active');
+        }
+
+        function openDropDown() {
+            const dropDown = document.querySelector(".dropDown")
+            dropDown.classList.toggle("open")
         }
     </script>
 
@@ -151,8 +174,8 @@
     </div>
 
     <div class="btns">
-        <button>Open an Individual Account</button>
-        <button>Open a Cooperate Account</button>
+      <a href="etraderform.html"><button>Open an Individual Account</button>  </a>  
+      <a href="etraderform.html">    <button>Open a Cooperate Account</button>  </a>
     </div>
 </div>
 <br>
