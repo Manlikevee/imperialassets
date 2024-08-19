@@ -548,7 +548,12 @@ main h2 {
   height: fit-content;
   object-fit: contain;
 }
-
+.labelbox{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap:2px
+}
 .statgrid {
   display: grid;
 
