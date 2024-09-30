@@ -196,6 +196,7 @@ header {
     url("/assets/martin-martz-X5fEKadz0Xc-unsplash\ \(1\).jpg");
 }
 
+
 .advisory {
   background-image: linear-gradient(
       rgba(34, 34, 34, 0.48),
@@ -616,6 +617,7 @@ main h2 {
   text-align: center;
   color: #fdfdfd;
   max-width: 600px;
+
 }
 
 .herobtn {

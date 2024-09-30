@@ -50,6 +50,7 @@
               <a href="services.html">Services</a>
               <a href="careers.html">Careers</a>
               <a href="e-trader.html">E-Trader</a>
+              <a href="investment-calculator.html">Investment Calculator</a>
          <a href="login.html" class="login">Login</a>
          <a href="etraderform.html" class="register">Signup</a>
           </div>
@@ -66,16 +67,20 @@
       <div class="containers etarderform">
         <br />
         <br />
-        <h1>Fixed Rate Note</h1>
-        <p>The Fixed Rate Note is targeted at Institutional and Private clients looking to lock in on our competitive rate for their investment. FAAM FRN is an attractive alternative to a Fixed deposit account.</p>
-<br>
+        <h1>Investment Calculator</h1>
+        <p>Use this calculator to estimate the potential growth of your investment over time. Simply enter the initial investment amount, expected annual interest rate, and the duration of your investment. The calculator will display your estimated returns, considering the effects of simple interest.
+<p>
+  Please note that the figures are indicative and actual returns may vary depending on market conditions, fees, and taxes. This tool is meant to provide a general understanding of how your investment might grow, helping you make informed financial decisions  .
+</p>
+      </p>
+<!-- <br>
     <p><b style="color:#c5af36">Investment Objective: </b>Placement of funds at fixed competitive rates.</p><br>
     <p><b style="color:#c5af36">Minimum investment:</b>&nbsp;N1</p><br>
-    <p><b style="color:#c5af36">Investment Period:</b>&nbsp;30 days – 1800 days</p>
+    <p><b style="color:#c5af36">Investment Period:</b>&nbsp;30 days – 1800 days</p> -->
     <br>
         
         <div class="formprogress">
-          <div class="progressdata">1 <span>/4</span></div>
+          <!-- <div class="progressdata"><strong id="stepss">1</strong>  <span>/4</span></div> -->
         </div>
         <br />
 
@@ -120,9 +125,12 @@
             <div class="labelbox">
               <label for="ageRange">Age Range</label>
               <select id="ageRange">
-                <option value="">Age Range</option>
-                <option value="Single">Single</option>
-                <option value="Married">Married</option>
+                <option value="">Select Age Range</option>
+                <option value="18-25">18-25</option>
+                <option value="26-35">26-35</option>
+                <option value="36-45">36-45</option>
+                <option value="46-55">46-55</option>
+                <option value="56+">56+</option>
               </select>
             </div>
           </div>
@@ -133,15 +141,50 @@
               <select id="country">
                 <option value="">Country</option>
                 <option value="Nigeria">Nigeria</option>
-                <option value="Ghana">Ghana</option>
+
               </select>
             </div>
             <div class="labelbox">
               <label for="state">State</label>
               <select id="state">
-                <option value="">State</option>
+                <option disabled selected>--Select State--</option>
+                <option value="Abia">Abia</option>
+                <option value="Adamawa">Adamawa</option>
+                <option value="Akwa Ibom">Akwa Ibom</option>
+                <option value="Anambra">Anambra</option>
+                <option value="Bauchi">Bauchi</option>
+                <option value="Bayelsa">Bayelsa</option>
+                <option value="Benue">Benue</option>
+                <option value="Borno">Borno</option>
+                <option value="Cross River">Cross River</option>
+                <option value="Delta">Delta</option>
+                <option value="Ebonyi">Ebonyi</option>
+                <option value="Edo">Edo</option>
+                <option value="Ekiti">Ekiti</option>
+                <option value="Enugu">Enugu</option>
+                <option value="FCT">Federal Capital Territory</option>
+                <option value="Gombe">Gombe</option>
+                <option value="Imo">Imo</option>
+                <option value="Jigawa">Jigawa</option>
+                <option value="Kaduna">Kaduna</option>
+                <option value="Kano">Kano</option>
+                <option value="Katsina">Katsina</option>
+                <option value="Kebbi">Kebbi</option>
+                <option value="Kogi">Kogi</option>
+                <option value="Kwara">Kwara</option>
                 <option value="Lagos">Lagos</option>
-                <option value="Ibadan">Ibadan</option>
+                <option value="Nasarawa">Nasarawa</option>
+                <option value="Niger">Niger</option>
+                <option value="Ogun">Ogun</option>
+                <option value="Ondo">Ondo</option>
+                <option value="Osun">Osun</option>
+                <option value="Oyo">Oyo</option>
+                <option value="Plateau">Plateau</option>
+                <option value="Rivers">Rivers</option>
+                <option value="Sokoto">Sokoto</option>
+                <option value="Taraba">Taraba</option>
+                <option value="Yobe">Yobe</option>
+                <option value="Zamfara">Zamfara</option>
               </select>
             </div>
           </div>
@@ -150,17 +193,19 @@
         <div class="etraderformgrid steps" id="stepTwo" style="display: none;">
           <div class="fblk">
             <div class="labelbox">
+              <label for="investmentName">Investment Name</label>
+              <input type="text" id="investmentName" placeholder="Investment Name" />
+            </div>
+          </div>
+
+          <div class="fblk">
+            <div class="labelbox">
               <label for="principal">Principal</label>
               <input type="text" id="principal" placeholder="Principal" />
             </div>
           </div>
         
-          <div class="fblk">
-            <div class="labelbox">
-              <label for="investmentName">Investment Name</label>
-              <input type="text" id="investmentName" placeholder="Investment Name" />
-            </div>
-          </div>
+       
         
           <div class="fblk">
             <div class="labelbox">
@@ -212,6 +257,7 @@
 
   
         </div>
+
         <div class="fblk etraderformgrid">
           <button id="prevBtn" onclick="prevStep()" style="display: none;">Previous</button>
           <button id="nextBtn" onclick="nextStep()">Next</button>
@@ -223,7 +269,7 @@
     <script>
       let currentStep = 0;
       const steps = document.querySelectorAll('.steps');
-    
+      let numstep = 1
       function showStep(step) {
         steps.forEach((stepDiv, index) => {
           stepDiv.style.display = index === step ? 'grid' : 'none';
@@ -235,6 +281,7 @@
     
       function nextStep() {
         if (currentStep === 0) {
+ 
           // Validate step 1
           const surname = document.getElementById('surname').value.trim();
           const firstName = document.getElementById('firstName').value.trim();
@@ -252,6 +299,7 @@
         }
 
         if (currentStep === 1) {
+
       // Calculate interest and maturity amount
       const principal = parseFloat(document.getElementById('principal').value);
       const rate = parseFloat(document.getElementById('rate').value);
@@ -270,6 +318,7 @@
     }
     
     if (currentStep === 1) {
+
       // Move to step 3 and display JSON payload
       displayPayload();
     }
@@ -278,6 +327,7 @@
           currentStep++;
           showStep(currentStep);
         } else {
+
           // Handle form submission
           alert('Form Submitted!');
         }
@@ -324,7 +374,7 @@
       interest: document.getElementById('interest').value,
       maturity: document.getElementById('maturity').value
     };
-
+    
     // Display the JSON in a <pre> tag
     document.getElementById('payloadDisplay').textContent = JSON.stringify(payload, null, 2);
   }

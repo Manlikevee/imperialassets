@@ -89,6 +89,14 @@
     <img src="assets/image 3.png" alt="">
 </b>
 
+
+
+
+
+
+
+
+
 <br>
 The Company will actively service the investment management needs of its customers ranging from high net-worth individuals to corporate/institutional and public entities in the areas of:
         </div>
@@ -97,6 +105,129 @@ The Company will actively service the investment management needs of its custome
 
 <br>
 <br>  
+
+<style>
+    .investflex{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        width: 100%;
+    }
+    .investtop{
+        width: 100%;
+        padding: 13px;
+        background-color: #f3f3f3;
+    }
+    .amtflx input{
+        border: 1px solid var(--border-color);
+  padding: 11px;
+  width: 100%;
+  margin-top: 10px;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 16.16px;
+  text-align: left;
+  color: var(--subtitle-color3);
+  border-radius: 3px;
+  height: 40px;
+    }
+
+    .investtop{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-top: 20px;
+  grid-gap: 10px;
+  gap: 10px;
+  display: grid;
+
+    }
+
+    .investbotom{
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  margin-top: 2px;
+  grid-gap: 10px;
+  gap: 10px;
+  display: grid;
+  padding: 10px;
+  background-color: #f3f3f3;
+  color: black;
+}
+
+.tv{
+    color: #c1a261;
+}
+</style>
+<div class="investflex">
+    <div class="icaltxtone">
+        Investment Calculator
+      
+      
+        
+          <br>
+          
+      
+      
+      
+      </div>
+      <div class="investtop">
+        <div class="amtflx">
+            <label for="">Principal</label>
+            <input type="number" id="principalInput">
+        </div>
+        <div class="amtflx">
+            <label for="">Investment Term (years)</label>
+            <input type="number" id="termInput">
+        </div>
+        <div class="amtflx">
+            <label for="">Investment Rate (%)</label>
+            <input type="text" value="9.5" readonly id="rateInput">
+        </div>
+    </div>
+    
+    <div class="investbotom">
+        <div class="tt">
+            <div class="ti">Total Invested:</div>
+            <div class="tv" id="principal">$</div>
+        </div>
+        <div class="tt">
+            <div class="ti">Total Interest:</div>
+            <div class="tv" id="interest">$0</div>
+        </div>
+        <div class="tt">
+            <div class="ti">Total Amount:</div>
+            <div class="tv" id="total">$</div>
+        </div>
+    </div>
+    
+    <script>
+        const principalInput = document.getElementById('principalInput');
+        const termInput = document.getElementById('termInput');
+        const rateInput = document.getElementById('rateInput');
+        const principalDisplay = document.getElementById('principal');
+        const interestDisplay = document.getElementById('interest');
+        const totalDisplay = document.getElementById('total');
+    
+        function calculateInvestment() {
+            const principal = parseFloat(principalInput.value) || 0;
+            const term = parseFloat(termInput.value) || 0;
+            const rate = parseFloat(rateInput.value) || 0;
+    
+            const interest = (principal * rate * term) / 100;
+            const total = principal + interest;
+    
+            principalDisplay.textContent = `$${principal.toLocaleString()}`;
+            interestDisplay.textContent = `$${interest.toLocaleString()}`;
+            totalDisplay.textContent = `$${total.toLocaleString()}`;
+        }
+    
+        // Attach event listeners for keyup
+        principalInput.addEventListener('keyup', calculateInvestment);
+        termInput.addEventListener('keyup', calculateInvestment);
+    </script>
+    
+</div>
+<br>
+<br>
 <br>  
 <div class="icaltxtone">
     Strategic Business Plans and Market Focus 

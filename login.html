@@ -192,6 +192,25 @@
       </div>
   </footer>
 
-    <script></script>
+    <script>
+    
+const fetchMarketData = async () => {
+  try {
+    const response = await fetch('https://doclib.ngxgroup.com/REST/api/statistics/equities/?market=&sector=&orderby=&pageSize=900&pageNo=0');
+    if (!response.ok) {
+      throw new Error(`Error: ${response.status}`);
+    }
+    const data = await response.json();
+    console.log(data);
+  } catch (error) {
+    console.error('Failed to fetch market data:', error);
+  }
+};
+
+// Run the fetch function
+fetchMarketData();
+
+    
+    </script>
   </body>
 </html>
