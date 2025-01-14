@@ -38,30 +38,30 @@
 
     <header>
       <div class="containers" id="header">
-          <div class="logo">
-              <img src="assets/IAML Logo-01.png" alt="">
-          </div>
-          <div class="menu-toggle" onclick="toggleMenu()">
-              <span></span>
-              <span></span>
-              <span></span>
-          </div>
-          <div class="links">
-              <a href="about.html">About</a>
-              <a href="services.html">Services</a>
-              <a href="careers.html">Careers</a>
-              <a href="e-trader.html">E-Trader</a>
-         <a href="login.html" class="login">Login</a>
-         <a href="etraderform.html" class="register">Signup</a>
-          </div>
+        <div class="logo">
+          <img src="assets/IAML Logo-01.png" alt="" />
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="links">
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="careers.html">Careers</a>
+          <a href="e-trader.html">E-Trader</a>
+          <a href="login.html" class="login">Login</a>
+          <a href="etraderform.html" class="register">Signup</a>
+        </div>
       </div>
-  </header>
-  <script>
+    </header>
+    <script>
       function toggleMenu() {
-          const links = document.querySelector('.links');
-          links.classList.toggle('active');
+        const links = document.querySelector(".links");
+        links.classList.toggle("active");
       }
-  </script>
+    </script>
     <div class="ovl"></div>
     <main>
       <div class="containers etarderform">
@@ -75,150 +75,222 @@
         <br />
 
         <style>
-          .fblk{
+          .fblk {
             flex-direction: column;
             gap: 2px;
           }
-    
-          .btnk{
+
+          .btnk {
             display: flex;
             flex-direction: row;
             gap: 10px;
           }
 
-          textarea{
+          textarea {
             width: 100%;
             padding: 10px;
             border: 1px solid var(--border-color);
-    padding: 11px;
-    width: 100%;
-    margin-top: 10px;
-    font-family: Poppins;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 16.16px;
-    text-align: left;
-    color: var(--subtitle-color3);
-    border-radius: 3px;
+            padding: 11px;
+            width: 100%;
+            margin-top: 10px;
+            font-family: Poppins;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.16px;
+            text-align: left;
+            color: var(--subtitle-color3);
+            border-radius: 3px;
           }
         </style>
 
-
-
-      
-<form id="my-form">
+        <form id="my-form">
           <div class="etraderformgrid">
-              <!-- Personal Information Section -->
-              <div class="fblk">
-                  <label for="date">Date</label>
-                  <input type="date" id="date" required />
-              </div>
-              <div class="fblk">
-                  <label for="bank-account-no">Bank A/C No.</label>
-                  <input type="text" id="bank-account-no" placeholder="Bank Account Number" required />
-              </div>
-              <div class="fblk">
-                  <label for="name">Name</label>
-                  <input type="text" id="name" placeholder="Full Name" required />
-              </div>
-              <div class="fblk">
-                  <label for="nationality">Nationality</label>
-                  <input type="text" id="nationality" placeholder="Nationality" required />
-              </div>
-              <div class="fblk">
-                  <label for="address-office">Address (Office)</label>
-                  <input type="text" id="address-office" placeholder="Office Address" required />
-              </div>
-              <div class="fblk">
-                  <label for="telephone-office">Telephone (Office)</label>
-                  <input type="tel" id="telephone-office" placeholder="Office Telephone" required />
-              </div>
-              <div class="fblk">
-                  <label for="address-home">Address (Home)</label>
-                  <input type="text" id="address-home" placeholder="Home Address" required />
-              </div>
-              <div class="fblk">
-                  <label for="telephone-home">Telephone (Home)</label>
-                  <input type="tel" id="telephone-home" placeholder="Home Telephone" required />
-              </div>
-  
-              <!-- Occupation & Employment Information -->
-              <div class="fblk">
-                  <label for="occupation">Occupation/Line of Business</label>
-                  <input type="text" id="occupation" placeholder="Occupation/Line of Business" required />
-              </div>
-              <div class="fblk">
-                  <label for="introduced-by">Who introduced you to Imperial Asset Managers Limited?</label>
-                  <input type="text" id="introduced-by" placeholder="Name of Introducer" required />
-              </div>
-              <div class="fblk">
-                  <label for="profession">Profession/Occupation</label>
-                  <input type="text" id="profession" placeholder="Profession/Occupation" required />
-              </div>
-              <div class="fblk">
-                  <label for="company-name">Name of Company</label>
-                  <input type="text" id="company-name" placeholder="Company Name" required />
-              </div>
-              <div class="fblk">
-                  <label for="self-employed">Self Employed?</label>
-                  <select id="self-employed" required>
-                      <option value="">Select</option>
-                      <option value="Yes">Yes</option>
-                      <option value="No">No</option>
-                  </select>
-              </div>
-              <div class="fblk">
-                  <label for="job-title">Job Title</label>
-                  <input type="text" id="job-title" placeholder="Job Title" />
-              </div>
-              <div class="fblk">
-                  <label for="annual-income">Annual Income</label>
-                  <input type="text" id="annual-income" placeholder="Annual Income" required />
-              </div>
-  
-              <!-- Additional Information -->
-              <div class="fblk">
-                  <label for="source-of-funds">Source of Funds to Operate Account</label>
-                  <textarea id="source-of-funds" placeholder="Describe your source of funds" required></textarea>
-              </div>
-  
-              <!-- Income Sources -->
-              <div class="fblk">
-                  <label for="expected-income">Expected Annual Income</label>
-                  <input type="number" id="expected-income" placeholder="Amount" />
-              </div>
-              <div class="fblk">
-                  <label for="income-source">Source of Income</label>
-                  <select id="income-source" required>
-                      <option value="">Select</option>
-                      <option value="Salaries">Salaries</option>
-                      <option value="Trading">Trading</option>
-                      <option value="Business Income">Business Income</option>
-                      <option value="Retailing">Retailing</option>
-                      <option value="Others">Others</option>
-                  </select>
-              </div>
-              <div class="fblk">
-                  <label for="other-sources">Other Sources of Income</label>
-                  <textarea id="other-sources" placeholder="Please specify other sources of income"></textarea>
-              </div>
-  
-              <!-- Client Profile & Background Information -->
-              <div class="fblk">
-                  <label for="client-profile">Client Profile</label>
-                  <textarea id="client-profile" placeholder="Provide a snapshot of customer, source of funds, expected account activity, background etc." required></textarea>
-              </div>
-  
-              <!-- Relationship Manager -->
-              <div class="fblk">
-                  <label for="relationship-manager">Relationship Manager (not below the level of Investment Officer)</label>
-                  <input type="text" id="relationship-manager" placeholder="Relationship Manager" required />
-              </div>
-  
-          </div>
-      </form>
-  
+            <!-- Personal Information Section -->
+            <div class="fblk">
+              <label for="date">Date</label>
+              <input type="date" id="date" required />
+            </div>
+            <div class="fblk">
+              <label for="bank-account-no">Bank A/C No.</label>
+              <input
+                type="text"
+                id="bank-account-no"
+                placeholder="Bank Account Number"
+                required
+              />
+            </div>
+            <div class="fblk">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Full Name" required />
+            </div>
+            <div class="fblk">
+              <label for="nationality">Nationality</label>
+              <input
+                type="text"
+                id="nationality"
+                placeholder="Nationality"
+                required
+              />
+            </div>
+            <div class="fblk">
+              <label for="address-office">Address (Office)</label>
+              <input
+                type="text"
+                id="address-office"
+                placeholder="Office Address"
+                required
+              />
+            </div>
+            <div class="fblk">
+              <label for="telephone-office">Telephone (Office)</label>
+              <input
+                type="tel"
+                id="telephone-office"
+                placeholder="Office Telephone"
+                required
+              />
+            </div>
+            <div class="fblk">
+              <label for="address-home">Address (Home)</label>
+              <input
+                type="text"
+                id="address-home"
+                placeholder="Home Address"
+                required
+              />
+            </div>
+            <div class="fblk">
+              <label for="telephone-home">Telephone (Home)</label>
+              <input
+                type="tel"
+                id="telephone-home"
+                placeholder="Home Telephone"
+                required
+              />
+            </div>
 
+            <!-- Occupation & Employment Information -->
+            <div class="fblk">
+              <label for="occupation">Occupation/Line of Business</label>
+              <input
+                type="text"
+                id="occupation"
+                placeholder="Occupation/Line of Business"
+                required
+              />
+            </div>
+            <div class="fblk">
+              <label for="introduced-by"
+                >Who introduced you to Imperial Asset Managers Limited?</label
+              >
+              <input
+                type="text"
+                id="introduced-by"
+                placeholder="Name of Introducer"
+                required
+              />
+            </div>
+            <div class="fblk">
+              <label for="profession">Profession/Occupation</label>
+              <input
+                type="text"
+                id="profession"
+                placeholder="Profession/Occupation"
+                required
+              />
+            </div>
+            <div class="fblk">
+              <label for="company-name">Name of Company</label>
+              <input
+                type="text"
+                id="company-name"
+                placeholder="Company Name"
+                required
+              />
+            </div>
+            <div class="fblk">
+              <label for="self-employed">Self Employed?</label>
+              <select id="self-employed" required>
+                <option value="">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+            </div>
+            <div class="fblk">
+              <label for="job-title">Job Title</label>
+              <input type="text" id="job-title" placeholder="Job Title" />
+            </div>
+            <div class="fblk">
+              <label for="annual-income">Annual Income</label>
+              <input
+                type="text"
+                id="annual-income"
+                placeholder="Annual Income"
+                required
+              />
+            </div>
+
+            <!-- Additional Information -->
+            <div class="fblk">
+              <label for="source-of-funds"
+                >Source of Funds to Operate Account</label
+              >
+              <textarea
+                id="source-of-funds"
+                placeholder="Describe your source of funds"
+                required
+              ></textarea>
+            </div>
+
+            <!-- Income Sources -->
+            <div class="fblk">
+              <label for="expected-income">Expected Annual Income</label>
+              <input type="number" id="expected-income" placeholder="Amount" />
+            </div>
+            <div class="fblk">
+              <label for="income-source">Source of Income</label>
+              <select id="income-source" required>
+                <option value="">Select</option>
+                <option value="Salaries">Salaries</option>
+                <option value="Trading">Trading</option>
+                <option value="Business Income">Business Income</option>
+                <option value="Retailing">Retailing</option>
+                <option value="Others">Others</option>
+              </select>
+            </div>
+            <div class="fblk">
+              <label for="other-sources">Other Sources of Income</label>
+              <textarea
+                id="other-sources"
+                placeholder="Please specify other sources of income"
+              ></textarea>
+            </div>
+
+            <!-- Client Profile & Background Information -->
+            <div class="fblk">
+              <label for="client-profile">Client Profile</label>
+              <textarea
+                id="client-profile"
+                placeholder="Provide a snapshot of customer, source of funds, expected account activity, background etc."
+                required
+              ></textarea>
+            </div>
+
+            <!-- Relationship Manager -->
+            <div class="fblk">
+              <label for="relationship-manager"
+                >Relationship Manager (not below the level of Investment
+                Officer)</label
+              >
+              <input
+                type="text"
+                id="relationship-manager"
+                placeholder="Relationship Manager"
+                required
+              />
+            </div>
+          </div>
+        </form>
 
         <div class="fblk etraderformgrid">
           <button id="print-btn">Next</button>
@@ -228,137 +300,129 @@
 
     <script>
       // Function to generate the PDF from the form
-      document.getElementById("print-btn").addEventListener("click", function () {
+      document
+        .getElementById("print-btn")
+        .addEventListener("click", function () {
           const element = document.getElementById("my-form");
-          
+
           // Options for the pdf generation
           const options = {
-              filename: 'form_submission.pdf', // Output PDF file name
-              html2canvas: { scale: 5},        // The scale for the canvas rendering
-              jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' } // PDF size and format
+            filename: "form_submission.pdf", // Output PDF file name
+            html2canvas: { scale: 5 }, // The scale for the canvas rendering
+            jsPDF: { unit: "in", format: "letter", orientation: "portrait" }, // PDF size and format
           };
 
           // Generate the PDF
           html2pdf().from(element).set(options).save();
-      });
-  </script>
+        });
+    </script>
 
-<style>
-    /* Print-specific styles */
-    @media print {
-            body {
-                margin: 0;
-                padding: 0;
-                font-family: Arial, sans-serif;
-            }
-            .etraderformgrid {
-               background-color: red;
-                display: grid;
-                grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
-                gap: 14px;
-                width: 100%;
-                padding: 0;
-            }
-            .form-btn {
-                display: none; /* Hide submit button on print */
-            }
-            .fblk input, .fblk select, .fblk textarea {
-                width: 100%; /* Ensure inputs and text areas take full width */
-                font-size: 12px; /* Adjust font size for better fit */
-            }
+    <style>
+      /* Print-specific styles */
+      @media print {
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: Arial, sans-serif;
         }
-</style>
+        .etraderformgrid {
+          background-color: red;
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+          gap: 14px;
+          width: 100%;
+          padding: 0;
+        }
+        .form-btn {
+          display: none; /* Hide submit button on print */
+        }
+        .fblk input,
+        .fblk select,
+        .fblk textarea {
+          width: 100%; /* Ensure inputs and text areas take full width */
+          font-size: 12px; /* Adjust font size for better fit */
+        }
+      }
+    </style>
     <footer>
-
-
       <div class="containers">
-          <div class="footersec">
-              <div class="footertop">Explore</div>
-              <div class="footerbtm">
-                  <a href="about.html">
-                      About
-
-                  </a>
-                  <a href="services.html">
-
-                      Board of Directors
-
-                  </a>
-                  <a href="services.html">
-
-                      Management
-
-                  </a>
-                  <a href="careers.html">
-
-                      Careers
-                  </a>
-
-              </div>
+        <div class="footersec">
+          <div class="footertop">Explore</div>
+          <div class="footerbtm">
+            <a href="about.html"> About </a>
+            <a href="services.html"> Board of Directors </a>
+            <a href="services.html"> Management </a>
+            <a href="careers.html"> Careers </a>
           </div>
+        </div>
 
-          <div class="footersec">
-              <div class="footertop">Our Businesses</div>
-              <div class="footerbtm">
-                  <a href="iaml.html">Imperial Asset Managers Limited</a>
-                  <a href="ical.html">Imperial Capital Advisers Limited</a>
-
-
-
-              </div>
+        <div class="footersec">
+          <div class="footertop">Our Businesses</div>
+          <div class="footerbtm">
+            <a href="iaml.html">Imperial Asset Managers Limited</a>
+            <a href="ical.html">Imperial Capital Advisers Limited</a>
           </div>
+        </div>
 
-          <div class="footersec">
-              <div class="footertop">Our Newsfeed</div>
-              <div class="footerbtm">
-                  <a href=""> All News</a>
-                  <a href="research.html">Research and Insights</a>
-                  <a href="">Blog</a>
-                  <a href="">Policies</a>
-                  <a href="">Terms & Conditions</a>
-              </div>
+        <div class="footersec">
+          <div class="footertop">Our Newsfeed</div>
+          <div class="footerbtm">
+            <a href=""> All News</a>
+            <a href="research.html">Research and Insights</a>
+            <a href="">Blog</a>
+            <a href="">Policies</a>
+            <a href="">Terms & Conditions</a>
           </div>
+        </div>
 
-
-          <div class="footersec">
-              <div class="footertop">Subscribe to our newsletter</div>
-              <div class="footerbtm">
-                  Weekly email about trends shaping markets, industries and the global
-                  economy.
-              </div>
-              <input type="text" class="footerinput">
-              <button>Submit</button>
+        <div class="footersec">
+          <div class="footertop">Subscribe to our newsletter</div>
+          <div class="footerbtm">
+            Weekly email about trends shaping markets, industries and the global
+            economy.
           </div>
+          <input type="text" class="footerinput" />
+          <button>Submit</button>
+        </div>
 
-
-          <div class="footersec">
-              <div class="footertop">Office Address</div>
-              <div class="footerbtm">
-                  <a href=""><b>Lagos Office:</b></a>
-                  <a href="">THE EBENEZER PLACE 148A, Ikeja Way Off Association Road Dolphin Estate, Ikoyi, Lagos.</a>
-
-              </div>
+        <div class="footersec">
+          <div class="footertop">Office Address</div>
+          <div class="footerbtm">
+            <!-- <a href=""><b>Lagos Office:</b></a> -->
+            <a href=""
+              >THE EBENEZER PLACE <br />
+              148A, Ikeja Way Off Association Road <br />
+              Dolphin Estate, <br />
+              Ikoyi, Lagos.</a
+            >
           </div>
+        </div>
+        <div class="footersec map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15857.979123387264!2d3.4184!3d6.458821!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x238182d4bcfe0325!2sImperial+Asset+Managers+Limited!5e0!3m2!1sen!2sng!4v1550768151695"
+            width="100%"
+            height="100%"
+            loading="lazy"
+            title="Imperial asset"
+            style="border: none"
+          ></iframe>
+        </div>
 
-          <div class="footersec">
-              <div class="footertop">Reach Us</div>
-              <div class="footerbtm">
-                  <a href=""><b>Send a Message</b></a>
-                  <a href="mailto:talk2us@imperialasset.com.ng">talk2us@imperialasset.com.ng</a>
-                  <a href="#">
-
-
-                      234 -1- 4637483, 08067035949, 09125007249
-
-                  </a>
-
-              </div>
+        <div class="footersec">
+          <div class="footertop">Reach Us</div>
+          <div class="footerbtm">
+            <a href=""><b>Send a Message</b></a>
+            <a href="mailto:talk2us@imperialasset.com.ng"
+              >talk2us@imperialasset.com.ng</a
+            >
+            <a href="#"> 234 -1- 4637483, 08067035949, 09125007249 </a>
           </div>
-          <div class="footersec">
-              <img src="assets/COMP.png" alt="">
-          </div>
+        </div>
+        <div class="footersec">
+          <img src="assets/COMP.png" alt="" />
+        </div>
       </div>
-  </footer>
+    </footer>
 
     <script></script>
   </body>

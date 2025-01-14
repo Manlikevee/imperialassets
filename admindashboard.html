@@ -18,120 +18,125 @@
 
     <!-- Popup -->
 
-
     <header>
       <div class="containers" id="header">
-          <div class="logo">
-              <img src="assets/IAML Logo-01.png" alt="">
-          </div>
-          <div class="menu-toggle" onclick="toggleMenu()">
-              <span></span>
-              <span></span>
-              <span></span>
-          </div>
-          <div class="links">
-    
-         <a href="login.html" class="login">Login</a>
- 
-          </div>
+        <div class="logo">
+          <img src="assets/IAML Logo-01.png" alt="" />
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="links">
+          <a href="login.html" class="login">Login</a>
+        </div>
       </div>
-  </header>
+    </header>
 
-  <style>
-    .fblk p{
-      color: #474747d0;
-
-    }
-    .fblk textarea{
-      border: 1px solid var(--border-color);
-  padding: 11px;
-  width: 100%;
-  margin-top: 10px;
-  font-family: Poppins;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16.16px;
-  text-align: left;
-  color: var(--subtitle-color3);
-  border-radius: 3px;
-  resize: none;
-    }
-  </style>
-  <script>
-      function toggleMenu() {
-          const links = document.querySelector('.links');
-          links.classList.toggle('active');
+    <style>
+      .fblk p {
+        color: #474747d0;
       }
-  </script>
+      .fblk textarea {
+        border: 1px solid var(--border-color);
+        padding: 11px;
+        width: 100%;
+        margin-top: 10px;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.16px;
+        text-align: left;
+        color: var(--subtitle-color3);
+        border-radius: 3px;
+        resize: none;
+      }
+    </style>
+    <script>
+      function toggleMenu() {
+        const links = document.querySelector(".links");
+        links.classList.toggle("active");
+      }
+    </script>
 
-  <style>
+    <style>
+      #myInput {
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        width: 100%;
+        font-size: 16px;
+        padding: 12px 20px 12px 40px;
+        border: 1px solid #ddd;
+        margin-bottom: 12px;
+      }
 
-#myInput {
+      #myTable {
+        border-collapse: collapse;
+        width: 100%;
+        border: 1px solid #ddd;
+        font-size: 14px;
+      }
 
-  background-position: 10px 10px;
-  background-repeat: no-repeat;
-  width: 100%;
-  font-size: 16px;
-  padding: 12px 20px 12px 40px;
-  border: 1px solid #ddd;
-  margin-bottom: 12px;
-}
+      #myTable th,
+      #myTable td {
+        text-align: left;
+        padding: 12px;
+      }
 
-#myTable {
-  border-collapse: collapse;
-  width: 100%;
-  border: 1px solid #ddd;
-  font-size: 14px;
-}
+      #myTable tr {
+        border-bottom: 1px solid #ddd;
+      }
 
-#myTable th, #myTable td {
-  text-align: left;
-  padding: 12px;
-}
-
-#myTable tr {
-  border-bottom: 1px solid #ddd;
-}
-
-#myTable tr.header, #myTable tr:hover {
-  background-color: #f1f1f1;
-}
-
-  </style>
+      #myTable tr.header,
+      #myTable tr:hover {
+        background-color: #f1f1f1;
+      }
+    </style>
     <div class="ovl"></div>
     <main id="content" class="hidden">
       <div class="containers etarderform">
         <br />
         <br />
-        <h1> </h1>
+        <h1></h1>
         <p>users Account Informaton</p>
-        <div class="formprogress">
-
-        </div>
+        <div class="formprogress"></div>
         <br />
 
-        <div class="dashcard etarderform" style="display: flex; flex-direction: column; justify-content: space-between; padding: 15px; border-radius: 4px;  min-height: 100px; width: 300px; background-color: antiquewhite;">
-
+        <div
+          class="dashcard etarderform"
+          style="
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 15px;
+            border-radius: 4px;
+            min-height: 100px;
+            width: 300px;
+            background-color: antiquewhite;
+          "
+        >
           <h3>Form Submissions</h3>
-          <p id="totalnum">
-
-          </p>
+          <p id="totalnum"></p>
         </div>
 
-        <br>
-        <input type="search" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+        <br />
+        <input
+          type="search"
+          id="myInput"
+          onkeyup="myFunction()"
+          placeholder="Search for names.."
+          title="Type in a name"
+        />
 
         <table id="myTable">
           <tr class="header">
-            <th style="width:40%;">ID</th>
-            <th style="width:40%;">Name</th>
-            <th style="width:40%;">Email</th>
+            <th style="width: 40%">ID</th>
+            <th style="width: 40%">Name</th>
+            <th style="width: 40%">Email</th>
           </tr>
-
-
-
         </table>
-        
+
         <script>
           function myFunction() {
             var input, filter, table, tr, td, i, txtValue;
@@ -148,192 +153,177 @@
                 } else {
                   tr[i].style.display = "none";
                 }
-              }       
+              }
             }
           }
-          </script>
+        </script>
 
         <!-- <div class="termstxt">
           By opening this account you are hereby agreeing to the terms and condition of the imperial asset managers limited. I/We hereby irrevocable release the company from all liability in the event that any telephone, text messages, e-mail,  facsimile transmission or letter is not received, or is mutilated, altered, illegible or interrupted, duplicated, incomplete, 
  unauthorized, or delayed for any reason.
         </div> -->
-
       </div>
     </main>
 
     <footer>
-
-
       <div class="containers">
-          <div class="footersec">
-              <div class="footertop">Explore</div>
-              <div class="footerbtm">
-                  <a href="about.html">
-                      About
-
-                  </a>
-                  <a href="services.html">
-
-                      Board of Directors
-
-                  </a>
-                  <a href="services.html">
-
-                      Management
-
-                  </a>
-                  <a href="careers.html">
-
-                      Careers
-                  </a>
-
-              </div>
+        <div class="footersec">
+          <div class="footertop">Explore</div>
+          <div class="footerbtm">
+            <a href="about.html"> About </a>
+            <a href="services.html"> Board of Directors </a>
+            <a href="services.html"> Management </a>
+            <a href="careers.html"> Careers </a>
           </div>
+        </div>
 
-          <div class="footersec">
-              <div class="footertop">Our Businesses</div>
-              <div class="footerbtm">
-                  <a href="iaml.html">Imperial Asset Managers Limited</a>
-                  <a href="ical.html">Imperial Capital Advisers Limited</a>
-
-
-
-              </div>
+        <div class="footersec">
+          <div class="footertop">Our Businesses</div>
+          <div class="footerbtm">
+            <a href="iaml.html">Imperial Asset Managers Limited</a>
+            <a href="ical.html">Imperial Capital Advisers Limited</a>
           </div>
+        </div>
 
-          <div class="footersec">
-              <div class="footertop">Our Newsfeed</div>
-              <div class="footerbtm">
-                  <a href=""> All News</a>
-                  <a href="research.html">Research and Insights</a>
-                  <a href="">Blog</a>
-                  <a href="">Policies</a>
-                  <a href="">Terms & Conditions</a>
-              </div>
+        <div class="footersec">
+          <div class="footertop">Our Newsfeed</div>
+          <div class="footerbtm">
+            <a href=""> All News</a>
+            <a href="research.html">Research and Insights</a>
+            <a href="">Blog</a>
+            <a href="">Policies</a>
+            <a href="">Terms & Conditions</a>
           </div>
+        </div>
 
-
-          <div class="footersec">
-              <div class="footertop">Subscribe to our newsletter</div>
-              <div class="footerbtm">
-                  Weekly email about trends shaping markets, industries and the global
-                  economy.
-              </div>
-              <input type="text" class="footerinput">
-              <button>Submit</button>
+        <div class="footersec">
+          <div class="footertop">Subscribe to our newsletter</div>
+          <div class="footerbtm">
+            Weekly email about trends shaping markets, industries and the global
+            economy.
           </div>
+          <input type="text" class="footerinput" />
+          <button>Submit</button>
+        </div>
 
-
-          <div class="footersec">
-              <div class="footertop">Office Address</div>
-              <div class="footerbtm">
-                  <a href=""><b>Lagos Office:</b></a>
-                  <a href="">THE EBENEZER PLACE 148A, Ikeja Way Off Association Road Dolphin Estate, Ikoyi, Lagos.</a>
-
-              </div>
+        <div class="footersec">
+          <div class="footertop">Office Address</div>
+          <div class="footerbtm">
+            <!-- <a href=""><b>Lagos Office:</b></a> -->
+            <a href=""
+              >THE EBENEZER PLACE <br />
+              148A, Ikeja Way Off Association Road <br />
+              Dolphin Estate, <br />
+              Ikoyi, Lagos.</a
+            >
           </div>
+        </div>
+        <div class="footersec map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15857.979123387264!2d3.4184!3d6.458821!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x238182d4bcfe0325!2sImperial+Asset+Managers+Limited!5e0!3m2!1sen!2sng!4v1550768151695"
+            width="100%"
+            height="100%"
+            loading="lazy"
+            title="Imperial asset"
+            style="border: none"
+          ></iframe>
+        </div>
 
-          <div class="footersec">
-              <div class="footertop">Reach Us</div>
-              <div class="footerbtm">
-                  <a href=""><b>Send a Message</b></a>
-                  <a href="mailto:talk2us@imperialasset.com.ng">talk2us@imperialasset.com.ng</a>
-                  <a href="#">
-
-
-                      234 -1- 4637483, 08067035949, 09125007249
-
-                  </a>
-
-              </div>
+        <div class="footersec">
+          <div class="footertop">Reach Us</div>
+          <div class="footerbtm">
+            <a href=""><b>Send a Message</b></a>
+            <a href="mailto:talk2us@imperialasset.com.ng"
+              >talk2us@imperialasset.com.ng</a
+            >
+            <a href="#"> 234 -1- 4637483, 08067035949, 09125007249 </a>
           </div>
-          <div class="footersec">
-              <img src="assets/COMP.png" alt="">
-          </div>
+        </div>
+        <div class="footersec">
+          <img src="assets/COMP.png" alt="" />
+        </div>
       </div>
-  </footer>
+    </footer>
 
     <script>
       // Sample API endpoint
-// Sample API endpoint
-const apiEndpoint = 'https://marketreports.vercel.app/account-opening-submissions/';
+      // Sample API endpoint
+      const apiEndpoint =
+        "https://marketreports.vercel.app/account-opening-submissions/";
 
-// Fetch data from the endpoint
-fetch(apiEndpoint)
-  .then(response => response.json())
-  .then(data => {
-    // Sort the data in descending order by 'id'
-    document.getElementById('totalnum').innerHTML = data.length
-    data.sort((a, b) => b.id - a.id); // Sorts by ID in descending order
+      // Fetch data from the endpoint
+      fetch(apiEndpoint)
+        .then((response) => response.json())
+        .then((data) => {
+          // Sort the data in descending order by 'id'
+          document.getElementById("totalnum").innerHTML = data.length;
+          data.sort((a, b) => b.id - a.id); // Sorts by ID in descending order
 
-    // Get the table element
-    const table = document.getElementById("myTable");
+          // Get the table element
+          const table = document.getElementById("myTable");
 
-    // Loop through the sorted data and create table rows
-    data.forEach(item => {
-      // Create a new row
-      const row = table.insertRow();
+          // Loop through the sorted data and create table rows
+          data.forEach((item) => {
+            // Create a new row
+            const row = table.insertRow();
 
-      // ID Cell
-      const cell1 = row.insertCell(0);
-      cell1.innerHTML = item.id;
+            // ID Cell
+            const cell1 = row.insertCell(0);
+            cell1.innerHTML = item.id;
 
-      // Name Cell
-      const cell2 = row.insertCell(1);
-      cell2.innerHTML = item.name;
+            // Name Cell
+            const cell2 = row.insertCell(1);
+            cell2.innerHTML = item.name;
 
-      // Email Cell
-      const cell3 = row.insertCell(2);
-      cell3.innerHTML = item.data.email || '';
+            // Email Cell
+            const cell3 = row.insertCell(2);
+            cell3.innerHTML = item.data.email || "";
 
-      // Set the onclick functionality to redirect to the detailed page
-      row.onclick = function() {
-        window.location.href = `/accountinfo.html?customer_number=${item.id}`;
-      };
-    });
-  })
-  .catch(error => console.error('Error fetching data:', error));
-
-
+            // Set the onclick functionality to redirect to the detailed page
+            row.onclick = function () {
+              window.location.href = `/accountinfo.html?customer_number=${item.id}`;
+            };
+          });
+        })
+        .catch((error) => console.error("Error fetching data:", error));
     </script>
 
-<script>
-  // Helper function to set a cookie
-  function setCookie(name, value, minutes) {
-    const expires = new Date(Date.now() + minutes * 60000).toUTCString();
-    document.cookie = `${name}=${value}; expires=${expires}; path=/`;
-  }
+    <script>
+      // Helper function to set a cookie
+      function setCookie(name, value, minutes) {
+        const expires = new Date(Date.now() + minutes * 60000).toUTCString();
+        document.cookie = `${name}=${value}; expires=${expires}; path=/`;
+      }
 
-  // Helper function to get a cookie
-  function getCookie(name) {
-    const cookies = document.cookie.split("; ");
-    for (const cookie of cookies) {
-      const [key, value] = cookie.split("=");
-      if (key === name) return value;
-    }
-    return null;
-  }
+      // Helper function to get a cookie
+      function getCookie(name) {
+        const cookies = document.cookie.split("; ");
+        for (const cookie of cookies) {
+          const [key, value] = cookie.split("=");
+          if (key === name) return value;
+        }
+        return null;
+      }
 
-  // Check if access is already granted
-  if (getCookie("access") === "granted") {
-    document.body.classList.remove("blurred");
-    document.getElementById("content").classList.remove("hidden");
-  } else {
-    // Ask for the password
-    const password = prompt("Enter the password to access the page:");
+      // Check if access is already granted
+      if (getCookie("access") === "granted") {
+        document.body.classList.remove("blurred");
+        document.getElementById("content").classList.remove("hidden");
+      } else {
+        // Ask for the password
+        const password = prompt("Enter the password to access the page:");
 
-    if (password === "Imp3r$al") {
-      // Correct password: grant access
-      setCookie("access", "granted", 30); // Grant access for 30 minutes
-      document.body.classList.remove("blurred");
-      document.getElementById("content").classList.remove("hidden");
-    } else {
-      // Incorrect password: show error and restrict access
-      alert("Incorrect password. Please reload the page to try again.");
-      document.body.style.display = "none"; // Hide the body to restrict access
-    }
-  }
-</script>
-
+        if (password === "Imp3r$al") {
+          // Correct password: grant access
+          setCookie("access", "granted", 30); // Grant access for 30 minutes
+          document.body.classList.remove("blurred");
+          document.getElementById("content").classList.remove("hidden");
+        } else {
+          // Incorrect password: show error and restrict access
+          alert("Incorrect password. Please reload the page to try again.");
+          document.body.style.display = "none"; // Hide the body to restrict access
+        }
+      }
+    </script>
   </body>
 </html>
