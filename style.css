@@ -1843,7 +1843,13 @@ footer a {
   }
 }
 
-.footerbtm a {
+@media screen and (min-width: 1024px) {
+  footer .map {
+    margin-right: 20px;
+  }
+}
+
+/* .footerbtm a {
   user-select: none;
   pointer-events: none;
-}
+} */

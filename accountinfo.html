@@ -18,136 +18,136 @@
 
     <!-- Popup -->
 
-
-  <header>
+    <header>
       <div class="containers" id="header">
-          <div class="logo">
-              <img src="assets/IAML Logo-01.png" alt="">
-          </div>
-          <div class="menu-toggle" onclick="toggleMenu()">
-              <span></span>
-              <span></span>
-              <span></span>
-          </div>
-          <div class="links">
-    
-         <a href="login.html" class="login">Logout</a>
- 
-          </div>
+        <div class="logo">
+          <img src="assets/IAML Logo-01.png" alt="" />
+        </div>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="links">
+          <a href="login.html" class="login">Logout</a>
+        </div>
       </div>
-  </header>
+    </header>
 
-  <style>
-    .fblk p{
-      color: #474747d0;
-
-    }
-    .fblk textarea{
-      border: 1px solid var(--border-color);
-  padding: 11px;
-  width: 100%;
-  margin-top: 10px;
-  font-family: Poppins;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16.16px;
-  text-align: left;
-  color: var(--subtitle-color3);
-  border-radius: 3px;
-  resize: none;
-    }
-  </style>
-  <script>
-      function toggleMenu() {
-          const links = document.querySelector('.links');
-          links.classList.toggle('active');
+    <style>
+      .fblk p {
+        color: #474747d0;
       }
-  </script>
+      .fblk textarea {
+        border: 1px solid var(--border-color);
+        padding: 11px;
+        width: 100%;
+        margin-top: 10px;
+        font-family: Poppins;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 16.16px;
+        text-align: left;
+        color: var(--subtitle-color3);
+        border-radius: 3px;
+        resize: none;
+      }
+    </style>
+    <script>
+      function toggleMenu() {
+        const links = document.querySelector(".links");
+        links.classList.toggle("active");
+      }
+    </script>
     <div class="ovl"></div>
     <main id="content" class="hidden">
       <div class="containers etarderform">
         <br />
         <br />
-        <h1> </h1>
-        <p> <a href="admindashboard.html">  <   users Account Informaton </a> </p>
-        <div class="formprogress">
-
-        </div>
+        <h1></h1>
+        <p><a href="admindashboard.html"> < users Account Informaton </a></p>
+        <div class="formprogress"></div>
         <br />
 
         <div id="etraderformgrid" class="etraderformgrid"></div>
 
         <script>
-document.addEventListener("DOMContentLoaded", () => {
-  // Get the customer_number from the query parameter
-  const urlParams = new URLSearchParams(window.location.search);
-  const customerNumber = urlParams.get("customer_number");
+          document.addEventListener("DOMContentLoaded", () => {
+            // Get the customer_number from the query parameter
+            const urlParams = new URLSearchParams(window.location.search);
+            const customerNumber = urlParams.get("customer_number");
 
-  // API endpoint
-  const apiEndpoint = `https://marketreports.vercel.app/submissions/${customerNumber}/`;
+            // API endpoint
+            const apiEndpoint = `https://marketreports.vercel.app/submissions/${customerNumber}/`;
 
-  // Fetch user data from the API
-  fetch(apiEndpoint)
-    .then((response) => {
-      if (!response.ok) {
-        throw new Error(`Failed to fetch data: ${response.status}`);
-      }
-      return response.json();
-    })
-    .then((data) => {
-      // Select the container where the data will be appended
-      const container = document.getElementById("etraderformgrid");
-      let htmlContent = "";
+            // Fetch user data from the API
+            fetch(apiEndpoint)
+              .then((response) => {
+                if (!response.ok) {
+                  throw new Error(`Failed to fetch data: ${response.status}`);
+                }
+                return response.json();
+              })
+              .then((data) => {
+                // Select the container where the data will be appended
+                const container = document.getElementById("etraderformgrid");
+                let htmlContent = "";
 
-      // Custom order for rendering: "last-name", "first-name", "email" followed by other fields
-      const keys = ["last-name", "first-name", "email"];
-      const requiredFields = ["live-photo-url", "utility-bill-url", "proof-identity-url"];
-      const imageFields = {};
+                // Custom order for rendering: "last-name", "first-name", "email" followed by other fields
+                const keys = ["last-name", "first-name", "email"];
+                const requiredFields = [
+                  "live-photo-url",
+                  "utility-bill-url",
+                  "proof-identity-url",
+                ];
+                const imageFields = {};
 
-      // Add custom fields in the defined order
-      keys.forEach((key) => {
-        if (data.data[key]) {
-          htmlContent += `
+                // Add custom fields in the defined order
+                keys.forEach((key) => {
+                  if (data.data[key]) {
+                    htmlContent += `
             <div class="fblk" style="display: flex; flex-direction: column; gap: 5px;">
               <label>${key.replace(/-/g, " ")}</label>
               <textarea readonly>${data.data[key]}</textarea>
             </div>
           `;
-        }
-      });
+                  }
+                });
 
-      // Separate required image fields from the rest
-      Object.entries(data.data).forEach(([key, value]) => {
-        if (requiredFields.includes(key) && value) {
-          imageFields[key] = value; // Save image fields separately
-        } else if (!keys.includes(key)) {
-          htmlContent += `
+                // Separate required image fields from the rest
+                Object.entries(data.data).forEach(([key, value]) => {
+                  if (requiredFields.includes(key) && value) {
+                    imageFields[key] = value; // Save image fields separately
+                  } else if (!keys.includes(key)) {
+                    htmlContent += `
             <div class="fblk" style="display: flex; flex-direction: column; gap: 5px;">
               <label>${key.replace(/-/g, " ")}</label>
               <textarea readonly>${value || "N/A"}</textarea>
             </div>
           `;
-        }
-      });
+                  }
+                });
 
-      // Append image fields last
-      Object.entries(imageFields).forEach(([key, value]) => {
-        htmlContent += `
+                // Append image fields last
+                Object.entries(imageFields).forEach(([key, value]) => {
+                  htmlContent += `
           <div class="fblk" style="display: flex; flex-direction: column; gap: 5px;">
             <label>${key.replace(/-/g, " ")}</label>
-            <img src="${value}" alt="${key.replace(/-/g, " ")} Preview" class="preview-img" />
+            <img src="${value}" alt="${key.replace(
+                    /-/g,
+                    " "
+                  )} Preview" class="preview-img" />
           </div>
         `;
-      });
+                });
 
-      // Insert the generated HTML into the container
-      container.innerHTML = htmlContent;
-    })
-    .catch((error) => {
-      console.error("Error fetching data:", error);
-    });
-});
-
+                // Insert the generated HTML into the container
+                container.innerHTML = htmlContent;
+              })
+              .catch((error) => {
+                console.error("Error fetching data:", error);
+              });
+          });
         </script>
 
         <!-- <div class="termstxt">
@@ -156,13 +156,24 @@ document.addEventListener("DOMContentLoaded", () => {
         </div> -->
         <div class="fblk etraderformgrid">
           <!-- <button>Previous</button> -->
-          <button>Print</button>
+          <button id="printButton" style="cursor: pointer">Print</button>
         </div>
       </div>
     </main>
+    <script>
+      document.getElementById("printButton").onclick = () => {
+        const printContents = document.getElementById("content").innerHTML;
+        const originalContents = document.body.innerHTML;
 
+        document.body.innerHTML = printContents;
 
+        window.print();
 
+        document.body.innerHTML = originalContents;
+
+        location.reload();
+      };
+    </script>
 
     <script>
       // Helper function to set a cookie
@@ -170,7 +181,7 @@ document.addEventListener("DOMContentLoaded", () => {
         const expires = new Date(Date.now() + minutes * 60000).toUTCString();
         document.cookie = `${name}=${value}; expires=${expires}; path=/`;
       }
-  
+
       // Helper function to get a cookie
       function getCookie(name) {
         const cookies = document.cookie.split("; ");
@@ -180,7 +191,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         return null;
       }
-  
+
       // Check if access is already granted
       if (getCookie("access") === "granted") {
         document.body.classList.remove("blurred");
@@ -188,7 +199,7 @@ document.addEventListener("DOMContentLoaded", () => {
       } else {
         // Ask for the password
         const password = prompt("Enter the password to access the page:");
-  
+
         if (password === "Imp3r$al") {
           // Correct password: grant access
           setCookie("access", "granted", 30); // Grant access for 30 minutes
@@ -202,99 +213,85 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     </script>
 
-
-
     <footer>
-
-
       <div class="containers">
-          <div class="footersec">
-              <div class="footertop">Explore</div>
-              <div class="footerbtm">
-                  <a href="about.html">
-                      About
-
-                  </a>
-                  <a href="services.html">
-
-                      Board of Directors
-
-                  </a>
-                  <a href="services.html">
-
-                      Management
-
-                  </a>
-                  <a href="careers.html">
-
-                      Careers
-                  </a>
-
-              </div>
+        <div class="footersec">
+          <div class="footertop">Explore</div>
+          <div class="footerbtm">
+            <a href="about.html"> About </a>
+            <a href="services.html"> Board of Directors </a>
+            <a href="services.html"> Management </a>
+            <a href="careers.html"> Careers </a>
           </div>
+        </div>
 
-          <div class="footersec">
-              <div class="footertop">Our Businesses</div>
-              <div class="footerbtm">
-                  <a href="iaml.html">Imperial Asset Managers Limited</a>
-                  <a href="ical.html">Imperial Capital Advisers Limited</a>
-
-
-
-              </div>
+        <div class="footersec">
+          <div class="footertop">Our Businesses</div>
+          <div class="footerbtm">
+            <a href="iaml.html">Imperial Asset Managers Limited</a>
+            <a href="ical.html">Imperial Capital Advisers Limited</a>
           </div>
+        </div>
 
-          <div class="footersec">
-              <div class="footertop">Our Newsfeed</div>
-              <div class="footerbtm">
-                  <a href=""> All News</a>
-                  <a href="research.html">Research and Insights</a>
-                  <a href="">Blog</a>
-                  <a href="">Policies</a>
-                  <a href="">Terms & Conditions</a>
-              </div>
+        <div class="footersec">
+          <div class="footertop">Our Newsfeed</div>
+          <div class="footerbtm">
+            <a href=""> All News</a>
+            <a href="research.html">Research and Insights</a>
+            <a href="">Blog</a>
+            <a href="">Policies</a>
+            <a href="">Terms & Conditions</a>
           </div>
+        </div>
 
-
-          <div class="footersec">
-              <div class="footertop">Subscribe to our newsletter</div>
-              <div class="footerbtm">
-                  Weekly email about trends shaping markets, industries and the global
-                  economy.
-              </div>
-              <input type="text" class="footerinput">
-              <button>Submit</button>
+        <div class="footersec">
+          <div class="footertop">Subscribe to our newsletter</div>
+          <div class="footerbtm">
+            Weekly email about trends shaping markets, industries and the global
+            economy.
           </div>
+          <input type="text" class="footerinput" />
+          <button>Submit</button>
+        </div>
 
-
-          <div class="footersec">
-              <div class="footertop">Office Address</div>
-              <div class="footerbtm">
-                  <a href=""><b>Lagos Office:</b></a>
-                  <a href="">THE EBENEZER PLACE 148A, Ikeja Way Off Association Road Dolphin Estate, Ikoyi, Lagos.</a>
-
-              </div>
+        <div class="footersec">
+          <div class="footertop">Office Address</div>
+          <div class="footerbtm">
+            <!-- <a href=""><b>Lagos Office:</b></a> -->
+            <a href=""
+              >THE EBENEZER PLACE <br />
+              148A, Ikeja Way Off Association Road <br />
+              Dolphin Estate, <br />
+              Ikoyi, Lagos.</a
+            >
           </div>
+        </div>
+        <div class="footersec map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15857.979123387264!2d3.4184!3d6.458821!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x238182d4bcfe0325!2sImperial+Asset+Managers+Limited!5e0!3m2!1sen!2sng!4v1550768151695"
+            width="100%"
+            height="100%"
+            loading="lazy"
+            title="Imperial asset"
+            style="border: none"
+          ></iframe>
+        </div>
 
-          <div class="footersec">
-              <div class="footertop">Reach Us</div>
-              <div class="footerbtm">
-                  <a href=""><b>Send a Message</b></a>
-                  <a href="mailto:talk2us@imperialasset.com.ng">talk2us@imperialasset.com.ng</a>
-                  <a href="#">
-
-
-                      234 -1- 4637483, 08067035949, 09125007249
-
-                  </a>
-
-              </div>
+        <div class="footersec">
+          <div class="footertop">Reach Us</div>
+          <div class="footerbtm">
+            <a href=""><b>Send a Message</b></a>
+            <a href="mailto:talk2us@imperialasset.com.ng"
+              >talk2us@imperialasset.com.ng</a
+            >
+            <a href="#"> 234 -1- 4637483, 08067035949, 09125007249 </a>
           </div>
-          <div class="footersec">
-              <img src="assets/COMP.png" alt="">
-          </div>
+        </div>
+        <div class="footersec">
+          <img src="assets/COMP.png" alt="" />
+        </div>
       </div>
-  </footer>
+    </footer>
 
     <script></script>
   </body>

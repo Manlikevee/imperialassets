@@ -19,7 +19,7 @@
 
 
 
-    <header>
+    <header style="box-shadow: 0 0 30px #00000014">
         <div class="containers" id="header">
             <a href="iamlhome.html" class="logo">
                 <img src="assets/IAML Logo-01.png" alt="">
@@ -44,12 +44,65 @@
                 <a href="careers.html">Careers</a>
                 <a href="e-trader.html">E-Trader</a>
            <a href="login.html" class="login">Login</a>
-           <a href="etraderform.html" class="register">Signup</a>
+           <a href="#openAccounts" class="register herobtn">Signup</a>
             </div>
         </div>
-        <iframe style="overflow: hidden;" src="https://dataex.nasdotcng.com/market_snapshot2/price_ticker" width="100%" height="30" scrolling="no"><span style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" data-mce-type="bookmark" class="mce_SELRES_start">&#xFEFF;</span></iframe>
+        <!-- <iframe style="overflow: hidden; border: none" src="https://dataex.nasdotcng.com/market_snapshot2/price_ticker" width="100%" height="30" scrolling="no"><span style="display: inline-block; width: 0px; overflow: hidden; line-height: 0;" data-mce-type="bookmark" class="mce_SELRES_start">&#xFEFF;</span></iframe> -->
+        <div style="padding: 2rem 0">
+            <div class="ticker">
+              <div class="ticker-content">
+                <p>SDAGMBANK 0.4800000000 — &nbsp;</p>
+                <p>0.00%SDAIRLIQ 8.0000000000 — &nbsp;</p>
+                <p>0.00%SDCAPDBETO 33.0000000000 — &nbsp;</p>
+                <p>0.00%SDCOSTAIN 0.5000000000 — &nbsp;</p>
+                <p>0.00%SDCRSBURA 1.0000000000 — &nbsp;</p>
+                <p>0.00%SDCRS</p>
+                <!-- Duplicate content for seamless scroll -->
+                <p>SDAGMBANK 0.4800000000 — &nbsp;</p>
+                <p>0.00%SDAIRLIQ 8.0000000000 — &nbsp;</p>
+                <p>0.00%SDCAPDBETO 33.0000000000 — &nbsp;</p>
+                <p>0.00%SDCOSTAIN 0.5000000000 — &nbsp;</p>
+                <p>0.00%SDCRSBURA 1.0000000000 — &nbsp;</p>
+                <p>0.00%SDCRS</p>
+              </div>
+            </div>
+          </div>
     </header>
-
+    <style>
+        .ticker {
+          overflow: hidden;
+          white-space: nowrap;
+          position: relative;
+          width: 95%;
+          max-width: 1250px;
+          padding: 0 10px;
+          margin: 0 auto;
+          border-left: 28px solid #bfa162;
+          border-right: 28px solid #bfa162;
+          line-height: 18px;
+        }
+  
+        .ticker-content {
+          display: inline-flex;
+          animation: ticker-scroll 30s linear infinite;
+          padding-top: 2px;
+        }
+  
+        .ticker-content p {
+          white-space: nowrap;
+          font-size: 1.193rem;
+          color: #3d3c3a;
+        }
+  
+        @keyframes ticker-scroll {
+          0% {
+            transform: translate3d(0, 0, 0);
+          }
+          100% {
+            transform: translate3d(-50%, 0, 0);
+          }
+        }
+      </style>
   
 <style>
     .dropDown{
@@ -167,7 +220,7 @@
 </div>
 <br>
 <br>
-<div class="etrader">
+<div class="etrader" id="openAccounts">
     <br>
     <h2>E-Trader</h2>
     <div class="btxt">
@@ -175,9 +228,27 @@
     </div>
 
     <div class="btns">
-      <a href="etraderform.html"><button>Open an Individual Account</button>  </a>  
-      <a href="etraderform.html">    <button>Open a Cooperate Account</button>  </a>
-    </div>
+        <button id="individual-account-btn">
+          Open an Individual Account
+        </button>
+        <button id="corporate-account-btn">Open a Corporate Account</button>
+
+        <script>
+          const individualAccountBtn = document.getElementById(
+            "individual-account-btn"
+          );
+          const corporateAccountBtn = document.getElementById(
+            "corporate-account-btn"
+          );
+
+          individualAccountBtn.addEventListener("click", () => {
+            window.location.href = "etraderform.html";
+          });
+          corporateAccountBtn.addEventListener("click", () => {
+            window.location.href = "ecorporateform.html";
+          });
+        </script>
+      </div>
 </div>
 <br>
 <style>
@@ -525,41 +596,54 @@ document.getElementById('losers-btn').addEventListener('click', function(e) {
 </div>
 <br>
 <style>
+    .boardperson{
+            cursor: pointer;
+    }
     .boardperson img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-}
+
+    }
+
 </style>
+
+
 <div class="containers">
     <h3>BOARD OF DIRECTORS</h3>
     <div class="servicesgrid blogs" id="directors">
-        <div class="boardperson">
-            <img src="image-placeholder-300x300.jpg" alt="">
+        <div class="boardperson" onclick="window.location.href = 'https://review.imperialasset.com.ng/samuel-turoti.html'"   role="button" 
+        tabindex="0">
+            <img src="image-placeholder-300x300.jpg" alt="Prince Samuel TUROTI">
             <div class="tag">CHAIRMAN</div>
             <div class="name">Prince Samuel TUROTI</div>
+
         </div>
-        <div class="boardperson">
-            <img src="image-placeholder-300x300.jpg" alt="">
+        <div class="boardperson" onclick="window.location.href = 'https://review.imperialasset.com.ng/olubori-olubukola.html'"   role="button" 
+        tabindex="0">
+            <img src="image-placeholder-300x300.jpg" alt="Olubori OLUBUKOLA">
             <div class="tag">Director</div>
-            <div class="name"> Olubori OLUBUKOLA</div>
+            <div class="name">Olubori OLUBUKOLA</div>
         </div>
 
-        <div class="boardperson">
-            <img src="image-placeholder-300x300.jpg" alt="">
+        <div class="boardperson" onclick="window.location.href = 'https://review.imperialasset.com.ng/bashar-dankaro.html'"   role="button" 
+        tabindex="0">
+            <img src="image-placeholder-300x300.jpg" alt="Bashar DANKARO">
             <div class="tag">Director</div>
-            <div class="name"> Bashar DANKARO</div>
+            <div class="name">Bashar DANKARO</div>
         </div>
 
-        <div class="boardperson">
-            <img src="image-placeholder-300x300.jpg" alt="">
+        <div class="boardperson" onclick="window.location.href = 'https://review.imperialasset.com.ng/segun-jolayemi.html'"   role="button" 
+        tabindex="0">
+            <img src="image-placeholder-300x300.jpg" alt="Segun JOLAYEMI">
             <div class="tag">Director</div>
-            <div class="name"> Segun JOLAYEMI</div>
+            <div class="name">Segun JOLAYEMI</div>
         </div>
-        <div class="boardperson">
-            <img src="image-placeholder-300x300.jpg" alt="">
+        <div class="boardperson" onclick="window.location.href = 'https://review.imperialasset.com.ng/tayo-akintan.html'"   role="button" 
+        tabindex="0">
+            <img src="image-placeholder-300x300.jpg" alt="Tayo AKINTAN">
             <div class="tag">Chief Executive Director</div>
-            <div class="name"> Tayo AKINTAN</div>
+            <div class="name">Tayo AKINTAN</div>
         </div>
     </div>
     <br>
@@ -568,46 +652,53 @@ document.getElementById('losers-btn').addEventListener('click', function(e) {
 
     <h3>MANAGEMENT TEAM</h3>
     <div class="servicesgrid blogs" id="directors">
-        <div class="boardperson">
-            <img src="image-placeholder-300x300.jpg" alt="">
+        <div class="boardperson" onclick="window.location.href = 'https://review.imperialasset.com.ng/tayo-akintan.html'"   role="button" 
+        tabindex="0">
+            <img src="image-placeholder-300x300.jpg" alt="Tayo AKINTAN">
             <div class="tag">Chief Executive Director</div>
-            <div class="name"> Tayo AKINTAN</div>
+            <div class="name">Tayo AKINTAN</div>
         </div>
 
-        <div class="boardperson">
-            <img src="image-placeholder-300x300.jpg" alt="">
+        <div class="boardperson" onclick="window.location.href = 'https://review.imperialasset.com.ng/samuel_armon.html'"   role="button" 
+        tabindex="0">
+            <img src="image-placeholder-300x300.jpg" alt="Samuel ARMON">
             <div class="tag">Chief Compliance Officer</div>
-            <div class="name"> Samuel ARMON</div>
+            <div class="name">Samuel ARMON</div>
         </div>
 
-        <div class="boardperson">
-            <img src="image-placeholder-300x300.jpg" alt="">
+        <div class="boardperson" onclick="window.location.href = 'https://review.imperialasset.com.ng/abimbola-agbelusi.html'"   role="button" 
+        tabindex="0">
+            <img src="image-placeholder-300x300.jpg" alt="Abimbola AGBELUSI">
             <div class="tag">Chief Finance Officer</div>
-            <div class="name"> Abimbola AGBELUSI</div>
+            <div class="name">Abimbola AGBELUSI</div>
         </div>
 
-        <div class="boardperson">
-            <img src="image-placeholder-300x300.jpg" alt="">
+        <div class="boardperson" onclick="window.location.href = 'https://review.imperialasset.com.ng/ifeanyi-mbonu.html'"   role="button" 
+        tabindex="0">
+            <img src="image-placeholder-300x300.jpg" alt="Ifeanyi Mbonu">
             <div class="tag">Head of Securities Trading</div>
-            <div class="name"> Ifeanyi MBONU</div>
+            <div class="name">Ifeanyi Mbonu</div>
         </div>
 
-        <div class="boardperson">
-            <img src="image-placeholder-300x300.jpg" alt="">
+        <div class="boardperson" onclick="window.location.href = 'https://review.imperialasset.com.ng/kanayo-john.html'"   role="button" 
+        tabindex="0">
+            <img src="image-placeholder-300x300.jpg" alt="Kanayo JOHN">
             <div class="tag">Head of Research Unit</div>
-            <div class="name"> Kanayo JOHN</div>
+            <div class="name">Kanayo JOHN</div>
         </div>
 
-        <div class="boardperson">
-            <img src="image-placeholder-300x300.jpg" alt="">
+        <div class="boardperson" onclick="window.location.href = 'https://review.imperialasset.com.ng/ekanem-nyong.html'"   role="button" 
+        tabindex="0">
+            <img src="image-placeholder-300x300.jpg" alt="Ekanem NYONG">
             <div class="tag">Head of Support Services</div>
-            <div class="name"> Ekanem NYONG</div>
+            <div class="name">Ekanem NYONG</div>
         </div>
 
-        <div class="boardperson">
-            <img src="image-placeholder-300x300.jpg" alt="">
+        <div class="boardperson" onclick="window.location.href = 'https://review.imperialasset.com.ng/friday-adejo.html'"   role="button" 
+        tabindex="0">
+            <img src="image-placeholder-300x300.jpg" alt="Friday ADEJO">
             <div class="tag">Sales Trader</div>
-            <div class="name"> Friday ADEJO</div>
+            <div class="name">Friday ADEJO</div>
         </div>
     </div>
     <br>
@@ -654,102 +745,84 @@ document.getElementById('losers-btn').addEventListener('click', function(e) {
 </div>
         </div>
         <footer>
-
-
             <div class="containers">
-                <div class="footersec">
-                    <div class="footertop">Explore</div>
-                    <div class="footerbtm">
-                        <a href="about.html">
-                            About
-    
-                        </a>
-                        <a href="services.html">
-    
-                            Board of Directors
-    
-                        </a>
-                        <a href="services.html">
-    
-                            Management
-    
-                        </a>
-                        <a href="careers.html">
-    
-                            Careers
-                        </a>
-    
-                    </div>
+              <div class="footersec">
+                <div class="footertop">Explore</div>
+                <div class="footerbtm">
+                  <a href="about.html"> About </a>
+                  <a href="services.html"> Board of Directors </a>
+                  <a href="services.html"> Management </a>
+                  <a href="careers.html"> Careers </a>
                 </div>
-    
-                <div class="footersec">
-                    <div class="footertop">Our Businesses</div>
-                    <div class="footerbtm">
-                        <a href="iaml.html">Imperial Asset Managers Limited</a>
-                        <a href="ical.html">Imperial Capital Advisers Limited</a>
-    
-    
-    
-                    </div>
+              </div>
+      
+              <div class="footersec">
+                <div class="footertop">Our Businesses</div>
+                <div class="footerbtm">
+                  <a href="iaml.html">Imperial Asset Managers Limited</a>
+                  <a href="ical.html">Imperial Capital Advisers Limited</a>
                 </div>
-    
-                <div class="footersec">
-                    <div class="footertop">Our Newsfeed</div>
-                    <div class="footerbtm">
-                        <a href=""> All News</a>
-                        <a href="research.html">Research and Insights</a>
-                        <a href="">Blog</a>
-                        <a href="">Policies</a>
-                        <a href="">Terms & Conditions</a>
-                    </div>
+              </div>
+      
+              <div class="footersec">
+                <div class="footertop">Our Newsfeed</div>
+                <div class="footerbtm">
+                  <a href=""> All News</a>
+                  <a href="research.html">Research and Insights</a>
+                  <a href="">Blog</a>
+                  <a href="">Policies</a>
+                  <a href="">Terms & Conditions</a>
                 </div>
-    
-    
-                <div class="footersec">
-                    <div class="footertop">Subscribe to our newsletter</div>
-                    <div class="footerbtm">
-                        Weekly email about trends shaping markets, industries and the global
-                        economy.
-                    </div>
-                    <input type="text" class="footerinput">
-                    <button>Submit</button>
+              </div>
+      
+              <div class="footersec">
+                <div class="footertop">Subscribe to our newsletter</div>
+                <div class="footerbtm">
+                  Weekly email about trends shaping markets, industries and the global
+                  economy.
                 </div>
-    
-    
-                <div class="footersec">
-                    <div class="footertop">Office Address</div>
-                    <div class="footerbtm">
-                        <a href=""><b>Head Office:</b></a>
-                        <a href="">The Imperial Place
-    
-                          24A Mainland Way
-                          
-                          Dolphin Estate Ikoyi
-                          
-                          Lagos.</a>
-    
-                    </div>
+                <input type="text" class="footerinput" />
+                <button>Submit</button>
+              </div>
+      
+              <div class="footersec">
+                <div class="footertop">Office Address</div>
+                <div class="footerbtm">
+                  <!-- <a href=""><b>Lagos Office:</b></a> -->
+                  <a href=""
+                    >THE EBENEZER PLACE <br />
+                    148A, Ikeja Way Off Association Road <br />
+                    Dolphin Estate, <br />
+                    Ikoyi, Lagos.</a
+                  >
                 </div>
-    
-                <div class="footersec">
-                    <div class="footertop">Reach Us</div>
-                    <div class="footerbtm">
-                        <a href=""><b>Send a Message</b></a>
-                        <a href="mailto:talk2us@imperialasset.com.ng">talk2us@imperialasset.com.ng</a>
-                        <a href="#">
-    
-    
-                            234 -1- 4637483, 08067035949, 09125007249
-    
-                        </a>
-    
-                    </div>
+              </div>
+              <div class="footersec map">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15857.979123387264!2d3.4184!3d6.458821!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x238182d4bcfe0325!2sImperial+Asset+Managers+Limited!5e0!3m2!1sen!2sng!4v1550768151695"
+                  width="100%"
+                  height="100%"
+                  loading="lazy"
+                  title="Imperial asset"
+                  style="border: none"
+                ></iframe>
+              </div>
+      
+              <div class="footersec">
+                <div class="footertop">Reach Us</div>
+                <div class="footerbtm">
+                  <a href=""><b>Send a Message</b></a>
+                  <a href="mailto:talk2us@imperialasset.com.ng"
+                    >talk2us@imperialasset.com.ng</a
+                  >
+                  <a href="#"> 234 -1- 4637483, 08067035949, 09125007249 </a>
                 </div>
-                <div class="footersec">
-                    <img src="assets/COMP.png" alt="">
-                </div>
+              </div>
+              <div class="footersec">
+                <img src="assets/COMP.png" alt="" />
+              </div>
             </div>
-        </footer>
+          </footer>
 
 
 

@@ -1,606 +1,710 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Imperial Asset Managers Limited – We are Imperial….Proudly Imperial</title>
-    <meta name="description" content="Welcome to Imperial Asset Managers Limited. We specialize in Securities Trading, Investment Advisory, Financial Advisory, Research, and provide an advanced platform with our Imperial e-Trader service.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-</head>
-<body>
-
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Imperial Asset Managers Limited – We are Imperial….Proudly Imperial
+    </title>
+    <meta
+      name="description"
+      content="Welcome to Imperial Asset Managers Limited. We specialize in Securities Trading, Investment Advisory, Financial Advisory, Research, and provide an advanced platform with our Imperial e-Trader service."
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+  </head>
+  <body>
     <div class="overlay" id="overlay"></div>
 
     <!-- Popup -->
 
-
-
-
-  
     <header>
-        <div class="containers" id="header">
-            <a href="/" class="logo">
-                <img src="assets/IAML Logo-01.png" alt="">
-            </a>
-            <div class="menu-toggle" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="links">
-                <a href="about.html">About</a>
-                <a href="services.html">Services</a>
-                <a href="careers.html">Careers</a>
-                <a href="e-trader.html">E-Trader</a>
-           <a href="login.html" class="login">Login</a>
-           <a href="etraderform.html" class="register">Signup</a>
-            </div>
+      <div class="containers" id="header">
+        <a href="/" class="logo">
+          <img src="assets/IAML Logo-01.png" alt="" />
+        </a>
+        <div class="menu-toggle" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
+        <div class="links">
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="careers.html">Careers</a>
+          <a href="e-trader.html">E-Trader</a>
+          <a href="login.html" class="login">Login</a>
+          <a href="#openAccounts" id="signup-link" class="register">Signup</a>
+        </div>
+      </div>
     </header>
     <script>
-        function toggleMenu() {
-            const links = document.querySelector('.links');
-            links.classList.toggle('active');
-        }
+      function toggleMenu() {
+        const links = document.querySelector(".links");
+        links.classList.toggle("active");
+      }
     </script>
-    <div class="ovl">
-
-    </div>
-<main class="white">
-
-    <div class="hero research ical">
-        <div class="containers">
-            <small>
-                ICAL Target Plan Note 
-            </small>
-            <div class="toptxt">
-                Unlocking Financial Potential
-            </div>
-            <div class="btxt">
-                Empower your financial journey with Capital Advisers Limited's expert insights and tailored strategies. Navigate the world of investments with confidence.
-            </div>
-        
-            <div class="herobtn" id="open-popup-btn">
-                Request Service
-            </div>
-        
-        </div>
-            </div>
-        
-            
-            <div class="containers">
-   <br>
-   <br>  
-   <br>  
-<div class="icalflex">
-    <div class="icaltxtone">
-        A portfolio/funds management company
-    </div>
-    <div class="icaltwo">
-        <div class="accbody">
-            
-            Imperial Capital Advisers Limited (ICAL)  was incorporated as a private limited liability company to provide asset management and investment advisory services amongst others.  A portfolio/funds management company dedicated solely to managing assets for carefully selected investors who crave high-quality, specialized, and personalized niche products and services. 
-<br>
-<br>
-<b>
-    Licensed by <br>
-    <img src="assets/image 3.png" alt="">
-</b>
-
-
-
-
-
-
-
-
-
-<br>
-The Company will actively service the investment management needs of its customers ranging from high net-worth individuals to corporate/institutional and public entities in the areas of:
-        </div>
-    </div>
-</div>
-
-<br>
-<br>  
-
-<style>
-    .investflex{
-        display: flex;
+    <div
+      id="openAccounts"
+      style="
+        position: fixed;
+        background: rgb(0, 0, 0, 0.3);
+        top: 0;
+        height: 100%;
+        z-index: 99999;
+        display: none;
         flex-direction: column;
-        gap: 5px;
-        width: 100%;
-    }
-    .investtop{
-        width: 100%;
-        padding: 13px;
-        background-color: #f3f3f3;
-    }
-    .amtflx input{
-        border: 1px solid var(--border-color);
-  padding: 11px;
-  width: 100%;
-  margin-top: 10px;
-  font-family: Poppins;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 16.16px;
-  text-align: left;
-  color: var(--subtitle-color3);
-  border-radius: 3px;
-  height: 40px;
-    }
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <div class="git" style="position: relative">
+        <span
+          id="closeModal"
+          style="
+            font-size: 1rem;
+            border: 1px solid rgb(51, 50, 50);
+            padding: 0 10px;
+            position: absolute;
+            right: 0.5rem;
+            top: 5px;
+            cursor: pointer;
+          "
+          >x</span
+        >
+        <div class="faqtitle">Open an account with us</div>
+        <div class="faqsubtitle">
+          Imperial-trader, you can trade your securities online, in real time
+          with as little as a minimum account opening balance of N5,000 only
+          from wherever you are. We provide a comprehensive range of services to
+          meet and execute on your investment requirements
+        </div>
 
-    .investtop{
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  margin-top: 20px;
-  grid-gap: 10px;
-  gap: 10px;
-  display: grid;
+        <div class="btns">
+          <button id="individual-account-btn">
+            Open an Individual Account
+          </button>
+          <button id="corporate-account-btn">Open a Corporate Account</button>
 
-    }
+          <script>
+            const signupLink = document.getElementById("signup-link");
+            const openAccounts = document.getElementById("openAccounts");
+            const closeModal = document.getElementById("closeModal");
 
-    .investbotom{
-        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  margin-top: 2px;
-  grid-gap: 10px;
-  gap: 10px;
-  display: grid;
-  padding: 10px;
-  background-color: #f3f3f3;
-  color: black;
-}
+            signupLink.addEventListener("click", (e) => {
+              e.preventDefault();
+              openAccounts.style.display = "flex";
+            });
+            closeModal.addEventListener("click", () => {
+              openAccounts.style.display = "none";
+            });
 
-.tv{
-    color: #c1a261;
-}
-</style>
-<div class="investflex">
-    <div class="icaltxtone">
-        Investment Calculator
-      
-      
-        
-          <br>
-          
-      
-      
-      
+            const individualAccountBtn = document.getElementById(
+              "individual-account-btn"
+            );
+            const corporateAccountBtn = document.getElementById(
+              "corporate-account-btn"
+            );
+
+            individualAccountBtn.addEventListener("click", () => {
+              window.location.href = "etraderform.html";
+            });
+            corporateAccountBtn.addEventListener("click", () => {
+              window.location.href = "ecorporateform.html";
+            });
+          </script>
+        </div>
       </div>
-      <div class="investtop">
-        <div class="amtflx">
-            <label for="">Principal</label>
-            <input type="number" id="principalInput">
-        </div>
-        <div class="amtflx">
-            <label for="">Investment Term (years)</label>
-            <input type="number" id="termInput">
-        </div>
-        <div class="amtflx">
-            <label for="">Investment Rate (%)</label>
-            <input type="number" value="9.5"  id="rateInput">
-        </div>
     </div>
-    
-    <div class="investbotom">
-        <div class="tt">
-            <div class="ti">Total Invested:</div>
-            <div class="tv" id="principal">₦</div>
-        </div>
-        <div class="tt">
-            <div class="ti">Total Interest:</div>
-            <div class="tv" id="interest">₦0</div>
-        </div>
-        <div class="tt">
-            <div class="ti">Total Amount:</div>
-            <div class="tv" id="total">₦</div>
-        </div>
-    </div>
-    
-    <script>
-        const principalInput = document.getElementById('principalInput');
-        const termInput = document.getElementById('termInput');
-        const rateInput = document.getElementById('rateInput');
-        const principalDisplay = document.getElementById('principal');
-        const interestDisplay = document.getElementById('interest');
-        const totalDisplay = document.getElementById('total');
-    
-        function calculateInvestment() {
-            const principal = parseFloat(principalInput.value) || 0;
-            const term = parseFloat(termInput.value) || 0;
-            const rate = parseFloat(rateInput.value) || 0;
-    
-            const interest = (principal * rate * term) / 100;
-            const total = principal + interest;
-    
-            principalDisplay.textContent = `₦${principal.toLocaleString()}`;
-            interestDisplay.textContent = `₦${interest.toLocaleString()}`;
-            totalDisplay.textContent = `₦${total.toLocaleString()}`;
-        }
-    
-        // Attach event listeners for keyup
-        principalInput.addEventListener('keyup', calculateInvestment);
-        termInput.addEventListener('keyup', calculateInvestment);
-    </script>
-    
-</div>
-<br>
-<br>
-<br>  
-<div class="icaltxtone">
-    Strategic Business Plans and Market Focus 
-
-    <div class="icalsmall">
-        ICAL intends to operate along the following objectives: 
-    </div>
-
-  
-    <br>
-
-</div>
-<div class="statgrid">
-    <div class="statcard">
-        <img src="assets/tick.png" alt="">
-        <div class="stattext">
-            Focus on a niche-market to provide specialized investment services in the areas of portfolio/funds management. 
-        </div>
-    </div>
-    <div class="statcard">
-        <img src="assets/tick.png" alt="">
-        <div class="stattext">
-            Develop the skills, institutional and structural capacity required to compete and win in the marketplace and for achieving the vision and mission of the Company. 
-        </div>
-    </div>
-   
-    <div class="statcard">
-        <img src="assets/tick.png" alt="">
-        <div class="stattext">
-            Establish a strong reputation for high proficiency in portfolio/funds management. 
-        </div>
-    </div>
-    <div class="statcard">
-        <img src="assets/tick.png" alt="">
-        <div class="stattext">
-            To package and nurture a stream of innovative and profitable products for various lines such as portfolio management, unit trust scheme, etc. 
-        </div>
-    </div>
-
-    <div class="statcard">
-        <img src="assets/tick.png" alt="">
-        <div class="stattext">
-            Build a team of young, experienced, and creative professionals with an admixture of requisite education, expertise, and assertiveness for successful engagement in the marketplace. 
-        </div>
-    </div>
-
-
-    <div class="statcard">
-        <img src="assets/tick.png" alt="">
-        <div class="stattext">
-            To be a sought-after portfolio/funds management company by investors that place  premium on integrity, professionalism, personalized service, and superior returns on investment.
-        </div>
-    </div>
-
-
-    <div class="statcard">
-        <img src="assets/tick.png" alt="">
-        <div class="stattext">
-            To nurture an organization that the stakeholders would be proud to identify with, a responsible corporate citizen providing growth and development to its employees and  attractive returns on investment to the shareholders.
-        </div>
-    </div>
-
-</div>
-<br>
-<br>
-<div class="financeflex">
-    <div class="ffelxone">
-        <div class="ftitle">
-            Making distinct financial reports to the public  
-        </div>
-
-        <div class="accbody">
-  Imperial has offered detailed reports to keep its customers in tune with the financial progression of the company. View summary statements of our financial information across our group.
-
-        </div>
-
-        <br>
-        <br>
-        <button>Learn More</button>
-    </div>
-    <div class="fflextwo">
-        <img src="assets/Rectangle 103.png" alt="">
-    </div>
-</div>
-<br>  <br>  
-<h3>Learn more about trading</h3>
-<div class="servicesgrid blog" id="bloggrid">
-
-</div>
-<br>
-<br>
-<style>
-    .boardperson img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-</style>
-<div class="containers">
-    <h3>BOARD OF DIRECTORS</h3>
-    <div class="servicesgrid blogs" id="directors">
-        <div class="boardperson">
-            <img src="image-placeholder-300x300.jpg" alt="">
-            <div class="tag">Director</div>
-            <div class="name"><a href="https://review.imperialasset.com.ng/chris_ezem.html">Chris Ezem</a></div>
-        </div>
-        <div class="boardperson">
-            <img src="image-placeholder-300x300.jpg" alt="">
-            <div class="tag">Director</div>
-            <div class="name"><a href="https://review.imperialasset.com.ng/george-osahon.html">George OSAHON</a></div>
-        </div>
-
-        <div class="boardperson">
-            <img src="image-placeholder-300x300.jpg" alt="">
-            <div class="tag">Director</div>
-            <div class="name"><a href="https://review.imperialasset.com.ng/Henrietta.html">Dr. Henrietta ONWUGBUZIE</a></div>
-        </div>
-
-        <div class="boardperson">
-            <img src="image-placeholder-300x300.jpg" alt="">
-            <div class="tag">Chief Executive Director</div>
-            <div class="name"><a href="https://review.imperialasset.com.ng/tayo-akintan.html">Tayo AKINTAN</a></div>
-        </div>
-    </div>
-    <br>
-    <br>
-    <br>
-
-    <h3>MANAGEMENT TEAM</h3>
-    <div class="servicesgrid blogs" id="directors">
-
-        <div class="boardperson">
-            <img src="image-placeholder-300x300.jpg" alt="">
-            <div class="tag">Chief Operating Officer</div>
-            <div class="name"><a href="https://review.imperialasset.com.ng/ugochi.html">Ugochi Oyewola</a></div>
-        </div>
-
-        <div class="boardperson">
-            <img src="image-placeholder-300x300.jpg" alt="">
-            <div class="tag">Chief Compliance Officer</div>
-            <div class="name"><a href="https://review.imperialasset.com.ng/samuel_armon.html">Samuel ARMON</a></div>
-        </div>
-
-        <div class="boardperson">
-            <img src="image-placeholder-300x300.jpg" alt="">
-            <div class="tag">Head, Investment and Treasury</div>
-            <div class="name"><a href="https://review.imperialasset.com.ng/ademola.html">Ademola Olaitan</a></div>
-        </div>
-
-        <div class="boardperson">
-            <img src="image-placeholder-300x300.jpg" alt="">
-            <div class="tag">Finance Manager</div>
-            <div class="name"><a href="https://review.imperialasset.com.ng/Elizabeth.html">Elizabeth JOHNSON</a></div>
-        </div>
-
-        <div class="boardperson">
-            <img src="image-placeholder-300x300.jpg" alt="">
-            <div class="tag">Head Human Capital </div>
-            <div class="name"><a href="#">Ololade Tola-Oshilaja</a></div>
-        </div>
-
-        <div class="boardperson">
-            <img src="image-placeholder-300x300.jpg" alt="">
-            <div class="tag">Human capital Management</div>
-            <div class="name"><a href="https://review.imperialasset.com.ng/gift.html">Gift DASHUR</a></div>
-        </div>
-
-        <div class="boardperson">
-            <img src="image-placeholder-300x300.jpg" alt="">
-            <div class="tag">Head Operations</div>
-            <div class="name"><a href="https://review.imperialasset.com.ng/segun_fowodu.html">Segun Fowodu</a></div>
-        </div>
-
-    </div>
-</div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-            </div>
-</main>
-<br>
-<br>
-<div class="hero research jteam">
-    <div class="containers">
-        <div class="toptxt">
-            Join Our Team
-        </div>
-        <div class="btxt">
-            Explore our careers page to learn more about how we   can help you maximize your talent.
-        </div>
-    
-        <div class="herobtn" id="open-popup-btn">
-            Explore Careers
-        </div>
-    
-    </div>
-        </div>
-<br>
-<br>
+    <div class="ovl"></div>
+    <main class="white">
+      <div class="hero research ical">
         <div class="containers">
-            <h3>Discover More</h3>
-<div class="servicesgrid" id="servicegrid">
+          <small> ICAL Target Plan Note </small>
+          <div class="toptxt">Unlocking Financial Potential</div>
+          <div class="btxt">
+            Empower your financial journey with Capital Advisers Limited's
+            expert insights and tailored strategies. Navigate the world of
+            investments with confidence.
+          </div>
 
-</div>
+          <div class="herobtn" id="open-popup-btn">Request Service</div>
         </div>
-        <footer>
+      </div>
 
+      <div class="containers">
+        <br />
+        <br />
+        <br />
+        <div class="icalflex">
+          <div class="icaltxtone">A portfolio/funds management company</div>
+          <div class="icaltwo">
+            <div class="accbody">
+              Imperial Capital Advisers Limited (ICAL) was incorporated as a
+              private limited liability company to provide asset management and
+              investment advisory services amongst others. A portfolio/funds
+              management company dedicated solely to managing assets for
+              carefully selected investors who crave high-quality, specialized,
+              and personalized niche products and services.
+              <br />
+              <br />
+              <b>
+                Licensed by <br />
+                <img src="assets/image 3.png" alt="" />
+              </b>
 
-            <div class="containers">
-                <div class="footersec">
-                    <div class="footertop">Explore</div>
-                    <div class="footerbtm">
-                        <a href="about.html">
-                            About
-    
-                        </a>
-                        <a href="services.html">
-    
-                            Board of Directors
-    
-                        </a>
-                        <a href="services.html">
-    
-                            Management
-    
-                        </a>
-                        <a href="careers.html">
-    
-                            Careers
-                        </a>
-    
-                    </div>
-                </div>
-    
-                <div class="footersec">
-                    <div class="footertop">Our Businesses</div>
-                    <div class="footerbtm">
-                        <a href="iaml.html">Imperial Asset Managers Limited</a>
-                        <a href="ical.html">Imperial Capital Advisers Limited</a>
-    
-    
-    
-                    </div>
-                </div>
-    
-                <div class="footersec">
-                    <div class="footertop">Our Newsfeed</div>
-                    <div class="footerbtm">
-                        <a href=""> All News</a>
-                        <a href="research.html">Research and Insights</a>
-                        <a href="">Blog</a>
-                        <a href="">Policies</a>
-                        <a href="">Terms & Conditions</a>
-                    </div>
-                </div>
-    
-    
-                <div class="footersec">
-                    <div class="footertop">Subscribe to our newsletter</div>
-                    <div class="footerbtm">
-                        Weekly email about trends shaping markets, industries and the global
-                        economy.
-                    </div>
-                    <input type="text" class="footerinput">
-                    <button>Submit</button>
-                </div>
-    
-    
-                <div class="footersec">
-                    <div class="footertop">Office Address</div>
-                    <div class="footerbtm">
-                        <a href=""><b>Lagos Office:</b></a>
-                        <a href="">THE EBENEZER PLACE 148A, Ikeja Way Off Association Road Dolphin Estate, Ikoyi, Lagos.</a>
-    
-                    </div>
-                </div>
-    
-                <div class="footersec">
-                    <div class="footertop">Reach Us</div>
-                    <div class="footerbtm">
-                        <a href=""><b>Send a Message</b></a>
-                        <a href="mailto:talk2us@imperialasset.com.ng">talk2us@imperialasset.com.ng</a>
-                        <a href="#">
-    
-    
-                            234 -1- 4637483, 08067035949, 09125007249
-    
-                        </a>
-    
-                    </div>
-                </div>
-                <div class="footersec">
-                    <img src="assets/COMP.png" alt="">
-                </div>
+              <br />
+              The Company will actively service the investment management needs
+              of its customers ranging from high net-worth individuals to
+              corporate/institutional and public entities in the areas of:
             </div>
-        </footer>
+          </div>
+        </div>
 
+        <br />
+        <br />
 
+        <style>
+          .investflex {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            width: 100%;
+          }
+          .investtop {
+            width: 100%;
+            padding: 13px;
+            background-color: #f3f3f3;
+          }
+          .amtflx input {
+            border: 1px solid var(--border-color);
+            padding: 11px;
+            width: 100%;
+            margin-top: 10px;
+            font-family: Poppins;
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 16.16px;
+            text-align: left;
+            color: var(--subtitle-color3);
+            border-radius: 3px;
+            height: 40px;
+          }
 
+          .investtop {
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            margin-top: 20px;
+            grid-gap: 10px;
+            gap: 10px;
+            display: grid;
+          }
 
-<script>
-document.querySelectorAll('.faqhead').forEach(faqhead => {
-    faqhead.addEventListener('click', function() {
-        const faqbody = this.nextElementSibling;
+          .investbotom {
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            margin-top: 2px;
+            grid-gap: 10px;
+            gap: 10px;
+            display: grid;
+            padding: 10px;
+            background-color: #f3f3f3;
+            color: black;
+          }
 
-        if (faqbody.style.display === 'block') {
-            faqbody.style.display = 'none';
-            this.querySelector('span').innerHTML = 'expand_circle_down';
-        } else {
-            faqbody.style.display = 'block';
-            this.querySelector('span').innerHTML = 'expand_less';
-        }
-    });
-});
-const servicedata = [
-    {
-        tag: "Explore",
-        text: "Our Services",
-        img: "assets/service (3).png",
-    },
-    {
-        tag: "Explore",
-        text: "Bonds",
-        img: "assets/service (4).png",
-    },
-    {
-        tag: "Explore",
-        text: "Equities",
-        img: "assets/service (5).png",
-    },
-    {
-        tag: "Explore",
-        text: "Exchange Traded Funds",
-        img: "assets/service (1).png",
-    },
-    {
-        tag: "Explore",
-        text: "Mutual Funds",
-        img: "assets/service (2).png",
-    },
+          .tv {
+            color: #c1a261;
+          }
+        </style>
+        <div class="investflex">
+          <div class="icaltxtone">
+            Investment Calculator
 
-]
+            <br />
+          </div>
+          <div class="investtop">
+            <div class="amtflx">
+              <label for="">Principal</label>
+              <input type="number" id="principalInput" />
+            </div>
+            <div class="amtflx">
+              <label for="">Investment Term (years)</label>
+              <input type="number" id="termInput" />
+            </div>
+            <div class="amtflx">
+              <label for="">Investment Rate (%)</label>
+              <input type="number" value="9.5" id="rateInput" />
+            </div>
+          </div>
 
-const blogdata = [
-{
-        title: "From the GMD’s Desk: Introducing Babjide, Our New Business Head, Asset Management",
-        body: "Dear Client, The last few months have witnessed many exciting and celebratory moments for Imperial Asset serving you, our valued customer. We attained new heights, and celebrated major milestones in marking ...",
-        img: "assets/blog (1).png",
-    }, 
-    {
-        title: "Recent news about security Trading",
-        body: "Back-to-school season is around the corner. While it is an exciting time for children to reunite with their friends and parents, to get a much-needed break during the day, it ...",
-        img: "assets/blog (2).png",
-    }, 
-    {
-        title: "Capitalizing on the Current Nigerian Stock Market Boom  ",
-        body: "In the ever-evolving landscape of financial markets, one adage remains resoundingly true: “Time in the market beats timing the market.” As recent developments ignite a stock market boom in Nigeria, ...",
-        img: "assets/blog (3).png",
-    }, 
-]
+          <div class="investbotom">
+            <div class="tt">
+              <div class="ti">Total Invested:</div>
+              <div class="tv" id="principal">₦</div>
+            </div>
+            <div class="tt">
+              <div class="ti">Total Interest:</div>
+              <div class="tv" id="interest">₦0</div>
+            </div>
+            <div class="tt">
+              <div class="ti">Total Amount:</div>
+              <div class="tv" id="total">₦</div>
+            </div>
+          </div>
 
+          <script>
+            const principalInput = document.getElementById("principalInput");
+            const termInput = document.getElementById("termInput");
+            const rateInput = document.getElementById("rateInput");
+            const principalDisplay = document.getElementById("principal");
+            const interestDisplay = document.getElementById("interest");
+            const totalDisplay = document.getElementById("total");
 
-function createblogcard(dataArray) {
-    const bloggrid = document.getElementById('bloggrid');
-    let cardsHTML = '';
+            function calculateInvestment() {
+              const principal = parseFloat(principalInput.value) || 0;
+              const term = parseFloat(termInput.value) || 0;
+              const rate = parseFloat(rateInput.value) || 0;
 
-    dataArray.forEach(data => {
-    
-        cardsHTML += `
+              const interest = (principal * rate * term) / 100;
+              const total = principal + interest;
+
+              principalDisplay.textContent = `₦${principal.toLocaleString()}`;
+              interestDisplay.textContent = `₦${interest.toLocaleString()}`;
+              totalDisplay.textContent = `₦${total.toLocaleString()}`;
+            }
+
+            // Attach event listeners for keyup
+            principalInput.addEventListener("keyup", calculateInvestment);
+            termInput.addEventListener("keyup", calculateInvestment);
+          </script>
+        </div>
+        <br />
+        <br />
+        <br />
+        <div class="icaltxtone">
+          Strategic Business Plans and Market Focus
+
+          <div class="icalsmall">
+            ICAL intends to operate along the following objectives:
+          </div>
+
+          <br />
+        </div>
+        <div class="statgrid">
+          <div class="statcard">
+            <img src="assets/tick.png" alt="" />
+            <div class="stattext">
+              Focus on a niche-market to provide specialized investment services
+              in the areas of portfolio/funds management.
+            </div>
+          </div>
+          <div class="statcard">
+            <img src="assets/tick.png" alt="" />
+            <div class="stattext">
+              Develop the skills, institutional and structural capacity required
+              to compete and win in the marketplace and for achieving the vision
+              and mission of the Company.
+            </div>
+          </div>
+
+          <div class="statcard">
+            <img src="assets/tick.png" alt="" />
+            <div class="stattext">
+              Establish a strong reputation for high proficiency in
+              portfolio/funds management.
+            </div>
+          </div>
+          <div class="statcard">
+            <img src="assets/tick.png" alt="" />
+            <div class="stattext">
+              To package and nurture a stream of innovative and profitable
+              products for various lines such as portfolio management, unit
+              trust scheme, etc.
+            </div>
+          </div>
+
+          <div class="statcard">
+            <img src="assets/tick.png" alt="" />
+            <div class="stattext">
+              Build a team of young, experienced, and creative professionals
+              with an admixture of requisite education, expertise, and
+              assertiveness for successful engagement in the marketplace.
+            </div>
+          </div>
+
+          <div class="statcard">
+            <img src="assets/tick.png" alt="" />
+            <div class="stattext">
+              To be a sought-after portfolio/funds management company by
+              investors that place premium on integrity, professionalism,
+              personalized service, and superior returns on investment.
+            </div>
+          </div>
+
+          <div class="statcard">
+            <img src="assets/tick.png" alt="" />
+            <div class="stattext">
+              To nurture an organization that the stakeholders would be proud to
+              identify with, a responsible corporate citizen providing growth
+              and development to its employees and attractive returns on
+              investment to the shareholders.
+            </div>
+          </div>
+        </div>
+        <br />
+        <br />
+        <div class="financeflex">
+          <div class="ffelxone">
+            <div class="ftitle">
+              Making distinct financial reports to the public
+            </div>
+
+            <div class="accbody">
+              Imperial has offered detailed reports to keep its customers in
+              tune with the financial progression of the company. View summary
+              statements of our financial information across our group.
+            </div>
+
+            <br />
+            <br />
+            <button>Learn More</button>
+          </div>
+          <div class="fflextwo">
+            <img src="assets/Rectangle 103.png" alt="" />
+          </div>
+        </div>
+        <br />
+        <br />
+        <h3>Learn more about trading</h3>
+        <div class="servicesgrid blog" id="bloggrid"></div>
+        <br />
+        <br />
+        <style>
+          .boardperson {
+            cursor: pointer;
+          }
+          .boardperson img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+          }
+        </style>
+        <div class="containers">
+          <h3>BOARD OF DIRECTORS</h3>
+          <div class="servicesgrid blogs" id="directors">
+            <div
+              class="boardperson"
+              onclick="window.location.href = 'https://review.imperialasset.com.ng/george-osahon.html'"
+              role="button"
+              tabindex="0"
+            >
+              <img src="image-placeholder-300x300.jpg" alt="George OSAHON" />
+              <div class="tag">Chairman</div>
+              <div class="name">George OSAHON</div>
+            </div>
+            <div
+              class="boardperson"
+              onclick="window.location.href = 'https://review.imperialasset.com.ng/chris_ezem.html'"
+              role="button"
+              tabindex="0"
+            >
+              <img src="image-placeholder-300x300.jpg" alt="Chris Ezem" />
+              <div class="tag">Director</div>
+              <div class="name">Chris Ezem</div>
+            </div>
+            <div
+              class="boardperson"
+              onclick="window.location.href = 'https://review.imperialasset.com.ng/bashar-dankaro.html'"
+              role="button"
+              tabindex="0"
+            >
+              <img src="image-placeholder-300x300.jpg" alt="Bashar DANKARO" />
+              <div class="tag">Director</div>
+              <div class="name">Bashar DANKARO</div>
+            </div>
+            <div
+              class="boardperson"
+              onclick="window.location.href = 'https://review.imperialasset.com.ng/Henrietta.html'"
+              role="button"
+              tabindex="0"
+            >
+              <img
+                src="image-placeholder-300x300.jpg"
+                alt="Dr. Henrietta ONWUGBUZIE"
+              />
+              <div class="tag">Director</div>
+              <div class="name">Dr. Henrietta ONWUGBUZIE</div>
+            </div>
+            <div
+              class="boardperson"
+              onclick="window.location.href = 'https://review.imperialasset.com.ng/tayo-akintan.html'"
+              role="button"
+              tabindex="0"
+            >
+              <img src="image-placeholder-300x300.jpg" alt="Tayo AKINTAN" />
+              <div class="tag">Director</div>
+              <div class="name">Tayo AKINTAN</div>
+            </div>
+          </div>
+          <br />
+          <br />
+          <br />
+
+          <h3>MANAGEMENT TEAM</h3>
+          <div class="servicesgrid blogs" id="directors">
+            <div
+              class="boardperson"
+              onclick="window.location.href = 'https://review.imperialasset.com.ng/ugochi.html'"
+              role="button"
+              tabindex="0"
+            >
+              <img src="image-placeholder-300x300.jpg" alt="Ugochi Oyewola" />
+              <div class="tag">Chief Operating Officer</div>
+              <div class="name">Ugochi Oyewola</div>
+            </div>
+            <div
+              class="boardperson"
+              onclick="window.location.href = 'https://review.imperialasset.com.ng/samuel_armon.html'"
+              role="button"
+              tabindex="0"
+            >
+              <img src="image-placeholder-300x300.jpg" alt="Samuel ARMON" />
+              <div class="tag">Chief Compliance Officer</div>
+              <div class="name">Samuel ARMON</div>
+            </div>
+            <div
+              class="boardperson"
+              onclick="window.location.href = 'https://review.imperialasset.com.ng/ademola.html'"
+              role="button"
+              tabindex="0"
+            >
+              <img src="image-placeholder-300x300.jpg" alt="Ademola Olaitan" />
+              <div class="tag">Head, Investment and Treasury</div>
+              <div class="name">Ademola Olaitan</div>
+            </div>
+            <div
+              class="boardperson"
+              onclick="window.location.href = 'https://review.imperialasset.com.ng/Elizabeth.html'"
+              role="button"
+              tabindex="0"
+            >
+              <img
+                src="image-placeholder-300x300.jpg"
+                alt="Elizabeth JOHNSON"
+              />
+              <div class="tag">Finance Manager</div>
+              <div class="name">Elizabeth JOHNSON</div>
+            </div>
+            <div
+              class="boardperson"
+              onclick="window.location.href = '#'"
+              role="button"
+              tabindex="0"
+            >
+              <img
+                src="image-placeholder-300x300.jpg"
+                alt="Ololade Tola-Oshilaja"
+              />
+              <div class="tag">Head Human Capital</div>
+              <div class="name">Ololade Tola-Oshilaja</div>
+            </div>
+            <div
+              class="boardperson"
+              onclick="window.location.href = 'https://review.imperialasset.com.ng/gift.html'"
+              role="button"
+              tabindex="0"
+            >
+              <img src="image-placeholder-300x300.jpg" alt="Gift DASHUR" />
+              <div class="tag">Head Business Development</div>
+              <div class="name">Gift DASHUR</div>
+            </div>
+            <div
+              class="boardperson"
+              onclick="window.location.href = 'https://review.imperialasset.com.ng/segun_fowodu.html'"
+              role="button"
+              tabindex="0"
+            >
+              <img src="image-placeholder-300x300.jpg" alt="Segun Fowodu" />
+              <div class="tag">Head Operations</div>
+              <div class="name">Segun Fowodu</div>
+            </div>
+          </div>
+        </div>
+
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+      </div>
+    </main>
+    <br />
+    <br />
+    <div class="hero research jteam">
+      <div class="containers">
+        <div class="toptxt">Join Our Team</div>
+        <div class="btxt">
+          Explore our careers page to learn more about how we can help you
+          maximize your talent.
+        </div>
+
+        <div class="herobtn" id="open-popup-btn">Explore Careers</div>
+      </div>
+    </div>
+    <br />
+    <br />
+    <div class="containers">
+      <h3>Discover More</h3>
+      <div class="servicesgrid" id="servicegrid"></div>
+    </div>
+    <footer>
+      <div class="containers">
+        <div class="footersec">
+          <div class="footertop">Explore</div>
+          <div class="footerbtm">
+            <a href="about.html"> About </a>
+            <a href="services.html"> Board of Directors </a>
+            <a href="services.html"> Management </a>
+            <a href="careers.html"> Careers </a>
+          </div>
+        </div>
+
+        <div class="footersec">
+          <div class="footertop">Our Businesses</div>
+          <div class="footerbtm">
+            <a href="iaml.html">Imperial Asset Managers Limited</a>
+            <a href="ical.html">Imperial Capital Advisers Limited</a>
+          </div>
+        </div>
+
+        <div class="footersec">
+          <div class="footertop">Our Newsfeed</div>
+          <div class="footerbtm">
+            <a href=""> All News</a>
+            <a href="research.html">Research and Insights</a>
+            <a href="">Blog</a>
+            <a href="">Policies</a>
+            <a href="">Terms & Conditions</a>
+          </div>
+        </div>
+
+        <div class="footersec">
+          <div class="footertop">Subscribe to our newsletter</div>
+          <div class="footerbtm">
+            Weekly email about trends shaping markets, industries and the global
+            economy.
+          </div>
+          <input type="text" class="footerinput" />
+          <button>Submit</button>
+        </div>
+
+        <div class="footersec">
+          <div class="footertop">Office Address</div>
+          <div class="footerbtm">
+            <!-- <a href=""><b>Lagos Office:</b></a> -->
+            <a href=""
+              >THE EBENEZER PLACE <br />
+              148A, Ikeja Way Off Association Road <br />
+              Dolphin Estate, <br />
+              Ikoyi, Lagos.</a
+            >
+          </div>
+        </div>
+        <div class="footersec map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15857.979123387264!2d3.4184!3d6.458821!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x238182d4bcfe0325!2sImperial+Asset+Managers+Limited!5e0!3m2!1sen!2sng!4v1550768151695"
+            width="100%"
+            height="100%"
+            loading="lazy"
+            title="Imperial asset"
+            style="border: none"
+          ></iframe>
+        </div>
+
+        <div class="footersec">
+          <div class="footertop">Reach Us</div>
+          <div class="footerbtm">
+            <a href=""><b>Send a Message</b></a>
+            <a href="mailto:talk2us@imperialasset.com.ng"
+              >talk2us@imperialasset.com.ng</a
+            >
+            <a href="#"> 234 -1- 4637483, 08067035949, 09125007249 </a>
+          </div>
+        </div>
+        <div class="footersec">
+          <img src="assets/COMP.png" alt="" />
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      document.querySelectorAll(".faqhead").forEach((faqhead) => {
+        faqhead.addEventListener("click", function () {
+          const faqbody = this.nextElementSibling;
+
+          if (faqbody.style.display === "block") {
+            faqbody.style.display = "none";
+            this.querySelector("span").innerHTML = "expand_circle_down";
+          } else {
+            faqbody.style.display = "block";
+            this.querySelector("span").innerHTML = "expand_less";
+          }
+        });
+      });
+      const servicedata = [
+        {
+          tag: "Explore",
+          text: "Our Services",
+          img: "assets/service (3).png",
+        },
+        {
+          tag: "Explore",
+          text: "Bonds",
+          img: "assets/service (4).png",
+        },
+        {
+          tag: "Explore",
+          text: "Equities",
+          img: "assets/service (5).png",
+        },
+        {
+          tag: "Explore",
+          text: "Exchange Traded Funds",
+          img: "assets/service (1).png",
+        },
+        {
+          tag: "Explore",
+          text: "Mutual Funds",
+          img: "assets/service (2).png",
+        },
+      ];
+
+      const blogdata = [
+        {
+          title:
+            "From the GMD’s Desk: Introducing Babjide, Our New Business Head, Asset Management",
+          body: "Dear Client, The last few months have witnessed many exciting and celebratory moments for Imperial Asset serving you, our valued customer. We attained new heights, and celebrated major milestones in marking ...",
+          img: "assets/blog (1).png",
+        },
+        {
+          title: "Recent news about security Trading",
+          body: "Back-to-school season is around the corner. While it is an exciting time for children to reunite with their friends and parents, to get a much-needed break during the day, it ...",
+          img: "assets/blog (2).png",
+        },
+        {
+          title: "Capitalizing on the Current Nigerian Stock Market Boom  ",
+          body: "In the ever-evolving landscape of financial markets, one adage remains resoundingly true: “Time in the market beats timing the market.” As recent developments ignite a stock market boom in Nigeria, ...",
+          img: "assets/blog (3).png",
+        },
+      ];
+
+      function createblogcard(dataArray) {
+        const bloggrid = document.getElementById("bloggrid");
+        let cardsHTML = "";
+
+        dataArray.forEach((data) => {
+          cardsHTML += `
 
         <div class="blogcard">
     <div class="serviceimg">
@@ -615,22 +719,19 @@ function createblogcard(dataArray) {
 </div>
 
         `;
-    });
+        });
 
-    bloggrid.innerHTML = cardsHTML;
-}
+        bloggrid.innerHTML = cardsHTML;
+      }
 
+      createblogcard(blogdata);
 
+      function createservicedata(dataArray) {
+        const servicegrid = document.getElementById("servicegrid");
+        let cardsHTML = "";
 
-createblogcard(blogdata)
-
-    function createservicedata(dataArray) {
-    const servicegrid = document.getElementById('servicegrid');
-    let cardsHTML = '';
-
-    dataArray.forEach(data => {
-    
-        cardsHTML += `
+        dataArray.forEach((data) => {
+          cardsHTML += `
         <div class="servicebox">
     <div class="serviceimg">
         <img src="${data.img}" alt="${data.text}">
@@ -639,13 +740,12 @@ createblogcard(blogdata)
     <div class="servicetext">${data.text}</div>
 </div>
         `;
-    });
+        });
 
-    servicegrid.innerHTML = cardsHTML;
-}
+        servicegrid.innerHTML = cardsHTML;
+      }
 
-createservicedata(servicedata);
-</script>
-
-</body>
+      createservicedata(servicedata);
+    </script>
+  </body>
 </html>
